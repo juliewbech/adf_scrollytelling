@@ -1,0 +1,51 @@
+---
+import DefaultSvg from "./primary-default.svg";
+import HoverSvg from "./primary-hover.svg";
+import FocusSvg from "./primary-focus.svg";
+
+const { size = "medium" } = Astro.props;
+
+const sizeClasses = {
+  large: "scale-110",
+  medium: "scale-100",
+  small: "scale-90",
+};
+---
+
+<div class={`relative inline-block ${sizeClasses[size]}`}>
+  <DefaultSvg class="button-svg default block" />
+  <HoverSvg class="button-svg hover hidden" />
+  <FocusSvg class="button-svg focus hidden" />
+</div>
+
+<style>
+.button-svg {
+  position: absolute;
+  inset: 0;
+}
+
+.button-svg.default {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.button-svg.hover,
+.button-svg.focus {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+div:hover .button-svg.default {
+  opacity: 0;
+}
+div:hover .button-svg.hover {
+  opacity: 1;
+}
+
+div:focus-within .button-svg.default {
+  opacity: 0;
+}
+div:focus-within .button-svg.focus {
+  opacity: 1;
+}
+</style>
