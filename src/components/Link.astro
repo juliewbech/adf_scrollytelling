@@ -8,7 +8,7 @@ const linkStyling = "font-paragraf uppercase";
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
 "textlink": "underline text-blue-500", /* text-primary-500 */
-"primary": "px-16 py-4 font-semibold border-black hover:underline transition delay-150 duration-200 ease-in-out", /* border-primary-500 */
+"primary": "px-5 font-semibold border-black hover:underline underline-offset-8 transition delay-150 duration-200 ease-in-out", /* border-primary-500 */
 "secondary": "px-16 py-4 border-blue-500" /* border-secondary-500 */
 };
  
@@ -16,8 +16,8 @@ const variantClasses = {
 const sizeClasses = {
 "default": "text-default", 
 "large": "text-4xl",
-"medium": "text-xl",
-"small": "text-large"
+"medium": "text-md",
+"small": "text-[16px]"
 };
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
