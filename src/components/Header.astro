@@ -1,5 +1,6 @@
 ---
 import Button from "../components/Button.astro";
+import MusicToggle from "./MusicToggle.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 const pathname = new URL(Astro.request.url).pathname;
@@ -19,7 +20,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
                 <Text><Link href="#" variant="primary" size="small">ADF & vores arbejde</Link></Text>
                 <Text><Link href="#" variant="primary" size="small">Sådan støtter du</Link></Text>
                 <Text><Button variant="primary" size="medium">Støt her</Button></Text>
-                <button>MUSIK</button>
+                <MusicToggle />
             </ul>
         </nav>
         <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
