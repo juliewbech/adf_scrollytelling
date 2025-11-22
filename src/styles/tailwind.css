@@ -9,43 +9,47 @@ html {
   scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: "Honk";
-  src: url("/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Quicksand";
-  src: url("/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Domine";
-  src: url("/fonts/Domine-Regular.ttf") format("truetype");
-}
-
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  --color-white: #fafafa;
+  --color-black: #494949;
+  --color-primary-400: #d96f67;
+  --color-primary-500: #b9534b;
+  --color-primary-600: #96423b;
+  --color-secondary-400: #6a9b71;
+  --color-secondary-500: #6a9b71;
+  --color-secondary-600: #446649;
 
-  /*Farver */
-  --color-primary-400: #00e4f5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006d75;
-  --color-secondary-400: #f5e400;
-  --color-secondary-500: #f5a600;
-  --color-secondary-600: #f57a00;
+  --font-header: "merriweather";
+  --font-paragraf: "barlow";
 
-  /*Typografi */
-  --font-display: "Honk", monospace;
-  --font-sans: "Quicksand", sans-serif;
-  --font-serif: "Domine", serif;
+  --breakpoint-xs: 25rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
 
 @layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
 
 @layer components {
 }
 
 @layer utilities {
+  .font-paragraf {
+    font-family: "Barlow", sans-serif;
+  }
+
+  .font-header {
+    font-family: "Merriweather", serif;
+  }
 }
