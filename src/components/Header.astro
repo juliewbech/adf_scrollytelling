@@ -1,19 +1,21 @@
 ---
+import Button from "../components/Button.astro";
+import Text from "../components/Text.astro";
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
-<header x-data="{ showmenu: false }" class="" >
+<header x-data="{ showmenu: false }" class="bg-none" >
     <div id="navbar" class="container mx-auto p-4 flex flex-row justify-between items-center">
         <div id="logo" class="">
-            <a href="#" class="font-display text-4xl">LOGO</a>
+            <a href="#" class="font-paragraf text-4xl">LOGO</a>
         </div>
         <nav id="desktopmenu" class="hidden lg:block">
-            <ul class="flex flex-row gap-4">
+            <ul class="flex flex-row gap-4 font-paragraf font-semibold text-xl text-white">
                 <li class=""><a href="/" class="">Minas historie</a></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
                 <li class=""><a href="/komponentbibliotek/" class="">Afghanistans situation</a></li>
                 <li class=""><a href="/komponentbibliotek/" class="">ADF & arbejdet</a></li>
                 <li class=""><a href="/komponentbibliotek/" class="">Sådan støtter du</a></li>
-                <button>STØT</button>
+                <Text><Button variant="primary" size="medium">Støt her</Button></Text>
                 <button>MUSIK</button>
             </ul>
         </nav>

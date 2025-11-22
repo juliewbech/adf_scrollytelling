@@ -4,6 +4,7 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
+import Header from "../components/Header.astro";
 import Tidslinje from "../components/Tidslinje.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
@@ -15,6 +16,8 @@ import Button from "../components/Button.astro";
 		<!-- HERO-SECTION -->
 		<section>
 			<div class="hero min-h-screen relative overflow-hidden">
+
+				
 			  
 			  {/* Video baggrund */}
 			  <video
@@ -30,20 +33,19 @@ import Button from "../components/Button.astro";
 		  
 			  {/* Header placeres absolut */}
 			  <div class="fixed top-2 p-2 w-full z-50">
+				<Header></Header>
 			  </div>
 		  
 			  {/* Overlay */}
-			  <div class="absolute w-full h-full bg-black opacity-30 z-10"></div>
+			  <div class="absolute w-full h-full bg-black opacity-50 z-10"></div>
 			
 		  
 			  {/* Content */}
-			  <div class="hero-content text-neutral-content text-center z-20 relative">
+			  <div class="hero-content text-neutral-content top-110 z-20 p-8 relative">
 				<div>
-				  <Heading htmlheading="h1">HØJSKOLE I UDLANDET!</Heading>
-				<Text teksttype="brødtekst">Eventyr, selvudvikling & fællesskab</Text>
-				  <Button variant="primary" size="medium">
-					<a href="/travelform">STØT</a>
-				  </Button>
+					<Heading htmlheading="h1" size="large" font="serif" color="white">Afghanske pigers</Heading>
+					<Heading htmlheading="h1" size="large" font="serif" color="white">forbud om uddannelse</Heading>
+					<Heading htmlheading="h2" size="small" font="serif" color="white">af Afghan Daanish Foundation</Heading>
 				</div>
 			  </div>
 			</div>
