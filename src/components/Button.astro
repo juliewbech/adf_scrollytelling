@@ -1,6 +1,7 @@
 ---
 import PrimaryButtonSvg from "./svg/PrimaryButtonSvg.astro";
 
+
 //henter parametrene fra Astro.props
 const{ variant="primary", size="medium"} = Astro.props;
 
@@ -26,7 +27,3 @@ const sizeClasses = {
 <div>
     <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
 </div>
-
-<div role="button">
-    {variant === "primary" && <PrimaryButtonSvg size={size} />}
-  </div>
