@@ -1,0 +1,56 @@
+---
+import { onMount } from 'astro/jsx-runtime';
+---
+
+<div
+  id="timeline-scroller"
+  class="w-screen h-screen overflow-x-scroll overflow-y-hidden flex no-scrollbar snap-x snap-mandatory"
+>
+  <div class="flex h-full w-[400vw]">
+    <div class="event snap-start flex items-center justify-center w-[100vw] text-4xl font-bold bg-gray-200 opacity-0 scale-75 transition-all duration-500 ease-out">
+      Event 1
+    </div>
+    <div class="event snap-start flex items-center justify-center w-[100vw] text-4xl font-bold bg-gray-300 opacity-0 scale-75 transition-all duration-500 ease-out">
+      Event 2
+    </div>
+    <div class="event snap-start flex items-center justify-center w-[100vw] text-4xl font-bold bg-gray-400 opacity-0 scale-75 transition-all duration-500 ease-out">
+      Event 3
+    </div>
+    <div class="event snap-start flex items-center justify-center w-[100vw] text-4xl font-bold bg-gray-500 opacity-0 scale-75 transition-all duration-500 ease-out">
+      Event 4
+    </div>
+  </div>
+</div>
+
+<script>
+  // Cross-browser observer animation (horizontal)
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("opacity-100", "scale-100");
+        } else {
+          entry.target.classList.remove("opacity-100", "scale-100");
+        }
+      });
+    },
+    {
+      root: document.querySelector("#timeline-scroller"),
+      threshold: 0.4,
+    }
+  );
+
+  document.querySelectorAll(".event").forEach((el) => {
+    observer.observe(el);
+  });
+</script>
+
+<style is:global>
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>
