@@ -1,11 +1,20 @@
 ---
 // Henter parametrene fra Astro.props
-const { teksttype="paragraf", stylingclasses=""} = Astro.props; 
+const { teksttype="brødtekst", font="paragraf", stylingclasses=""} = Astro.props; 
+
+//Definer den styling (Tailwind classes, der gør sig gældende for alle links
+const linkStyling = "font-paragraf"; 
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
-"italic": "text-sm text-italic",
-"paragraf": "text-xl my-4",
+"konsultativ": "text-sm text-italic",
+"brødtekst": "text-xl my-4",
+};
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige skrifttyper.
+const fontClasses = {
+"sans": "font-paragraf",
+"serif": "font-header",
 };
 ---
-<p class:list={[sizeClasses[teksttype], stylingclasses]}><slot /></p>
+<p class:list={[linkStyling, sizeClasses[teksttype], stylingclasses]}><slot /></p>
