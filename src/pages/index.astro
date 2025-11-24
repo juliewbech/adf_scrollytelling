@@ -56,6 +56,11 @@ import Button from "../components/Button.astro";
 			</div>
 		  </section>
 
+		  <section class="scrollzoom overflow-clip">
+			  <div class="absolute w-full bg-black opacity-40 z-10 h-[129vh]"></div>
+				<img src="https://i.imgur.com/spyPEht.jpeg" class="scrollzoomimg w-full" alt="">
+			</section> 
+
 	<!-- SECTION 1 -->
 	<article>
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/7z6EyAx.png')" ><!-- sticky elementet med lidt ekstra indhold -->
@@ -389,15 +394,13 @@ import Button from "../components/Button.astro";
 			</section>
 		</div>
 
-<!-- <Tidslinje></Tidslinje> -->
-
 		<!-- SECTION 6 -->
 		<section class="bg-fffff h-[100vh] mx-auto p-8">
 			<div class="pt-40">
-			<Heading htmlheading="h2" size="medium" font="serif" color="black">Ungdomslæsefærdighed i Afghanistan i 2022</Heading>
+			<Heading htmlheading="h2" size="large" font="serif" color="black">Ungdomslæsefærdighed i Afghanistan i 2022</Heading>
 		</div>
 			<div class="md:pt-6 xs:pt-4">
-			<Heading htmlheading="h2" size="small" font="serif" color="black">Alder 15-24 år</Heading>
+			<Heading htmlheading="h2" size="medium" font="serif" color="black">Alder 15-24 år</Heading>
 		</div>
 			<div class="flourish-embed flourish-chart md:pt-10 md:mx-8 xs:pt-10" data-src="visualisation/26180539"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26180539/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 	</section>
@@ -630,4 +633,15 @@ import Button from "../components/Button.astro";
 	}),
 	{ target: document.querySelector("#horisontalscrollsection") }
 	); 
+
+	// Scroll zoom effekt
+	scroll(
+    animate(".scrollzoomimg", { 
+        scale: [1, 1.5]    
+    }),
+    { 
+      target: document.querySelector(".scrollzoom"),
+      offset: ["0.50 end", "end end"]
+    }
+    )
 	</script>
