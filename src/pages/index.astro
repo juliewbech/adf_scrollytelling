@@ -305,16 +305,16 @@ import Button from "../components/Button.astro";
 
 		 <!-- SECTION 7 -->
 		 <div class="flex items-center h-screen w-full bg-cover bg-center bg-secondary-500" >
-			<p class="w-3/4 lg:w-1/2 mx-auto p-10 bg-white text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">Men DU kan være med til at ændre den yngre generation skæbne</p>
+			<p class="w-3/4 lg:w-1/2 mx-auto p-10 bg-white md:text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">Men DU kan være med til at ændre den yngre generation skæbne</p>
 		</div>
 
 		  <!-- SECTION 8 -->
 		  <article>
 			<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/JPq9jcC.jpeg')" ><!-- sticky elementet med lidt ekstra indhold -->
 				<div class="flex justify-start h-full">
-					<div class="flex flex-col w-full md:w-1/2  justify-center gap-4 p-4 ">
+					<div class="flex flex-col w-full md:w-1/2 md:justify-end md:text-white md:p-8 xs:justify-start xs:text-primary-600 gap-4 p-4 pt-8 ">
 						<div class="">
-							<Heading htmlheading="h1">Hvem er vi?</Heading>
+							<Heading htmlheading="h2" size="large" font="serif" color="">Hvem er vi?</Heading>
 						</div>
 					</div>
 				</div>
@@ -323,12 +323,16 @@ import Button from "../components/Button.astro";
 			<div class="relative flex justify-end">
 				<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-8
 				 p-4">
-					<div class="bg-slate-100 ">
-						<p class="text-center">Scrollende indhold 1</p>
-					</div>
-					<div class="bg-slate-100">
-						<p class="text-center">Scrollende indhold 2</p>
-					</div>
+				 <div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
+					<Text teksttype="brødtekst">
+						Afghan Daanish Foundation er en danskbaseret velgørenhedsorganisation, der arbejder for at give børn og unge i Afghanistan adgang til uddannelse – uanset køn, baggrund eller tro
+						</Text>
+				</div>
+				<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
+					<Text teksttype="brødtekst">
+						Organisationen blev grundlagt i 2019 af Najiba Akbari; en afghansk kvinde bosat i Danmark med ønsket om at genopbygge landet gennem viden og uddannelse.
+						</Text>
+				</div>
 				</div>
 			</div>
 			<div class="h-[100vh]"></div>
