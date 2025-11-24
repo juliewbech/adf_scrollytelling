@@ -3,12 +3,12 @@
 const { teksttype="brødtekst", font="paragraf", color=""} = Astro.props; 
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle links
-const linkStyling = "font-paragraf"; 
+const linkStyling = ""; 
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
 "konsultativ": "text-sm text-italic",
-"brødtekst": "text-xl my-4",
+"brødtekst": "md:text-xl my-4",
 };
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige skrifttyper.
@@ -23,4 +23,4 @@ const stylingClasses = {
 "black": "text-black",
 };
 ---
-<p class:list={[linkStyling, sizeClasses[teksttype], stylingClasses[color]]}><slot /></p>
+<p class:list={[linkStyling, sizeClasses[teksttype], fontClasses[font], stylingClasses[color]]}><slot /></p>
