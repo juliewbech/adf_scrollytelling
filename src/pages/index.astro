@@ -290,6 +290,24 @@ import Button from "../components/Button.astro";
 		 <div class="bg-white p-8">
 			<Heading htmlheading="h2" size="medium" font="serif" color="black">Afghanistan de sidste 30 år</Heading>
 		 </div>
+
+		 <div class="overflow-clip">
+			<section id="horisontalscrollsection" class="h-[1000vw]">
+				<ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
+					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/OC40RIF.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				<li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/33JKIDi.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/mbVdER8.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/icmhsLA.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/180hKdd.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/m4bS3ME.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/uQQ50at.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/180hKdd.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/180hKdd.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/inyizHu.png" alt="half portrait"><figcaption class="pl-4 italic w-1/3">Dette fine, lille kamera er et Diana F, der skyder med 120-film.</figcaption></figure></li>
+				</ul>
+			</section>
+		</div>
+
 <!-- <Tidslinje></Tidslinje> -->
 
 		<!-- SECTION 6 -->
@@ -523,4 +541,12 @@ import Button from "../components/Button.astro";
 	scroll(animate(".stickyparallax1", { y: [-300, 0] }), {
 		target: document.querySelector(".stickyparallax1"),
 	});
+
+		/* Horisontal scroll sektion */
+		scroll(
+	animate("#horisontalliste", {
+		transform: ["none", "translateX(-1000vw)"]
+	}),
+	{ target: document.querySelector("#horisontalscrollsection") }
+	); 
 	</script>
