@@ -339,24 +339,27 @@ import Button from "../components/Button.astro";
 		</article>
 		
 		  <!-- SECTION 9 -->
-		  <article>
-			<div class=" top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/yawKGBD.jpeg')" >
-				<section class="md:grid grid-cols-2">
-					<div>
-						<Heading htmlheading="h1">Vision</Heading>
-						<p>Lorem ipsum</p>
-					</div>
-					<div>
-						<Heading htmlheading="h1">Mission</Heading>
-						<p>Lorem ipsum</p>
-					</div>
-				</section>
-			</div>
-		</article>
-
-		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('https://i.imgur.com/yawKGBD.jpeg')" >
-			<p class="w-3/4 lg:w-1/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1">Well, the way they make shows is, they make one show. That show's called a pilot.</p>
+		<section class="">
+		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('https://i.imgur.com/fAwgeuA.jpeg')" >
+			<div class="w-3/4 lg:w-2/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1 rounded-3xl drop-shadow-md">
+				<Heading htmlheading="h1">Vores vision</Heading>
+				<Text teksttype="brødtekst">
+					 Et Afghanistan, hvor alle børn har adgang til uddannelse og mulighed for at forme deres fremtid.
+					</Text></div>
 		</div>
+	</section>
+
+	  <!-- SECTION 10 -->
+	  <section class="">
+		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('https://i.imgur.com/yawKGBD.jpeg')" >
+			<div class="w-3/4 lg:w-2/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1 rounded-3xl drop-shadow-md">
+				<Heading htmlheading="h1">Vores mission</Heading>
+				<Text teksttype="brødtekst">
+					 At støtte uddannelsesprojekter, skabe lokale samarbejder og give piger og kvinder mulighed for at lære – selv under vanskelige forhold
+					</Text></div>
+		</div>
+	</section>
+
 
 		<!-- SECTION 10 -->
 		<article>
@@ -477,4 +480,8 @@ import Button from "../components/Button.astro";
 <script>
 	/* Import af Motion One bibliotek */
 	import { animate, stagger, inView, scroll } from "motion";
+
+	scroll(animate(".stickyparallax1", { y: [-300, 0] }), {
+		target: document.querySelector(".stickyparallax1"),
+	});
 	</script>
