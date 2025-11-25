@@ -1,0 +1,29 @@
+---
+import PrimaryButtonSvg from "./svg/PrimaryButtonSvg.astro";
+
+
+//henter parametrene fra Astro.props
+const{ variant="primary", size="medium"} = Astro.props;
+
+//Definer den styling (Tailwind classes, der gør dig gældende for alle knapper)
+const buttonStyling = " px-8 py-2 rounded-full shadow-md";
+
+//Definer den styling (Tailwind Classes), der gør sig gældende for de forskellige varianter
+const variantClasses={
+"step1": "progress w-56",
+"step2": "bg-secondary-500 text-white transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-secondary-400 focus:bg-secondary-600 cursor-pointer",
+"step3": "bg-glass opacity-20 blur-sm border-white text-white transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-green-hover cursor-pointer",
+};
+
+//Definer den styling (Tailwind classes), der gør sig gældende de forskellige størrelser
+const sizeClasses = {
+    "large": "text-lg",
+    "medium": "text-base",
+    "small": "text-sm"
+};
+---
+
+
+<div>
+    <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+</div>
