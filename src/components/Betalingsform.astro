@@ -152,67 +152,68 @@ import Heading from "../components/Heading.astro";
 </style>
 
 <script>
-let selectedAmount = null;
-
-function selectAmount(amount) {
-  selectedAmount = amount;
-  console.log("Valgt beløb:", selectedAmount);
-}
-
-// Step 1 → Step 2 privat
-function goStep1Forward() {
-  document.getElementById('step1').style.display = 'none';
-  document.getElementById('step2').style.display = 'flex';
-}
-
-// Step 2 privat → Step1
-function goStep2Back() {
-  document.getElementById('step2').style.display = 'none';
-  document.getElementById('step1').style.display = 'flex';
-}
-
-// Step 2 privat → Step 3 eller Step 2Business
-function goStep2Forward() {
-  if (document.getElementById('businessCheckbox').checked) {
-    document.getElementById('step2').style.display = 'none';
-    document.getElementById('step2Business').style.display = 'flex';
-  } else {
-    document.getElementById('step2').style.display = 'none';
-    document.getElementById('step3').style.display = 'flex';
+  let selectedAmount = null;
+  
+  function selectAmount(amount) {
+    selectedAmount = amount;
+    console.log("Valgt beløb:", selectedAmount);
   }
-}
-
-// Step 2Business → Step 2 privat
-function goStep2BusinessBack() {
-  document.getElementById('step2Business').style.display = 'none';
-  document.getElementById('step2').style.display = 'flex';
-}
-
-// Step 2Business → Step 3
-function goStep2BusinessForward() {
-  document.getElementById('step2Business').style.display = 'none';
-  document.getElementById('step3').style.display = 'flex';
-}
-
-// Step 3 → Step 2 eller Step 2Business
-function goStep3Back() {
-  document.getElementById('step3').style.display = 'none';
-  if (document.getElementById('businessCheckbox') && document.getElementById('businessCheckbox').checked) {
-    document.getElementById('step2Business').style.display = 'flex';
-  } else {
+  
+  // Step 1 → Step 2 privat
+  function goStep1Forward() {
+    document.getElementById('step1').style.display = 'none';
     document.getElementById('step2').style.display = 'flex';
   }
-}
-
-// Step 3 → Step 4
-function goStep3Forward() {
-  document.getElementById('step3').style.display = 'none';
-  document.getElementById('step4').style.display = 'flex';
-}
-
-// Step 4 → Step 3
-function goStep4Back() {
-  document.getElementById('step4').style.display = 'none';
-  document.getElementById('step3').style.display = 'flex';
-}
-</script>
+  
+  // Step 2 privat → Step1
+  function goStep2Back() {
+    document.getElementById('step2').style.display = 'none';
+    document.getElementById('step1').style.display = 'flex';
+  }
+  
+  // Step 2 privat → Step 3 eller Step 2Business
+  function goStep2Forward() {
+    if (document.getElementById('businessCheckbox').checked) {
+      document.getElementById('step2').style.display = 'none';
+      document.getElementById('step2Business').style.display = 'flex';
+    } else {
+      document.getElementById('step2').style.display = 'none';
+      document.getElementById('step3').style.display = 'flex';
+    }
+  }
+  
+  // Step 2Business → Step 2 privat
+  function goStep2BusinessBack() {
+    document.getElementById('step2Business').style.display = 'none';
+    document.getElementById('step2').style.display = 'flex';
+  }
+  
+  // Step 2Business → Step 3
+  function goStep2BusinessForward() {
+    document.getElementById('step2Business').style.display = 'none';
+    document.getElementById('step3').style.display = 'flex';
+  }
+  
+  // Step 3 → Step 2 eller Step 2Business
+  function goStep3Back() {
+    document.getElementById('step3').style.display = 'none';
+    if (document.getElementById('businessCheckbox') && document.getElementById('businessCheckbox').checked) {
+      document.getElementById('step2Business').style.display = 'flex';
+    } else {
+      document.getElementById('step2').style.display = 'flex';
+    }
+  }
+  
+  // Step 3 → Step 4
+  function goStep3Forward() {
+    document.getElementById('step3').style.display = 'none';
+    document.getElementById('step4').style.display = 'flex';
+  }
+  
+  // Step 4 → Step 3
+  function goStep4Back() {
+    document.getElementById('step4').style.display = 'none';
+    document.getElementById('step3').style.display = 'flex';
+  }
+  </script>
+  
