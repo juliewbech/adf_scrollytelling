@@ -15,12 +15,10 @@ import Betalingsform from "../components/Betalingsform.astro";
 <MainLayout title="Afghan Daanish Foundation - kampagneside">
 	<body>
 	<main>
+		<!-- Progress-bar placeret i toppen af sitet -->
 
-		<!-- HERO-SECTION -->
 		<section>
 			<div class="hero min-h-screen relative overflow-hidden">
-
-				
 			  
 			  {/* Video baggrund */}
 			  <video
@@ -36,7 +34,7 @@ import Betalingsform from "../components/Betalingsform.astro";
 		  
 			  {/* Header placeres absolut */}
 			  <div class="absolute top-2 p-2 w-full z-50">
-		<!-- <div class="progress-bar h-4 fixed w-full bg-gradient-to-r from-pink-500 to-yellow-300 left-0 origin-top-left top-0 right-0"></div> -->
+		<div class="progress-bar h-4 fixed w-full bg-primary-600 left-0 origin-top-left top-0 right-0"></div>
 
 				<Header></Header>
 			  </div>
@@ -683,4 +681,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
       offset: ["0.50 end", "end end"]
     }
     )
+
+	/*Progress-baren/læseindikatoren */
+	scroll( animate(".progress-bar", { scaleX: [0, 1] }));
 	</script>
