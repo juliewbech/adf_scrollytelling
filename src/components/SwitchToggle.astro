@@ -1,0 +1,40 @@
+<div class="flex w-fit rounded-full overflow-hidden bg-white shadow-md">
+    <!-- ENGANGSSTØTTE -->
+    <button 
+      id="once-btn"
+      class="toggle-btn px-8 py-3 text-lg font-medium transition-colors duration-200 bg-[#B05E52] text-white">
+      Engangsstøtte
+    </button>
+  
+    <!-- MÅNEDLIG STØTTE -->
+    <button 
+      id="monthly-btn"
+      class="toggle-btn px-8 py-3 text-lg font-medium transition-colors duration-200 bg-white text-[#B05E52]">
+      Månedlig støtte
+    </button>
+  </div>
+  
+  <script>
+    const onceBtn = document.getElementById("once-btn");
+    const monthlyBtn = document.getElementById("monthly-btn");
+  
+    function activate(button) {
+      if (button === "once") {
+        onceBtn.classList.add("bg-[#B05E52]", "text-white");
+        onceBtn.classList.remove("bg-white", "text-[#B05E52]");
+  
+        monthlyBtn.classList.add("bg-white", "text-[#B05E52]");
+        monthlyBtn.classList.remove("bg-[#B05E52]", "text-white");
+      } else {
+        monthlyBtn.classList.add("bg-[#B05E52]", "text-white");
+        monthlyBtn.classList.remove("bg-white", "text-[#B05E52]");
+  
+        onceBtn.classList.add("bg-white", "text-[#B05E52]");
+        onceBtn.classList.remove("bg-[#B05E52]", "text-white");
+      }
+    }
+  
+    onceBtn.addEventListener("click", () => activate("once"));
+    monthlyBtn.addEventListener("click", () => activate("monthly"));
+  </script>
+  
