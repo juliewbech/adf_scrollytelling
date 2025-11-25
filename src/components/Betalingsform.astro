@@ -4,189 +4,215 @@ import Text from "../components/Text.astro";
 import Textinput from "../components/Textinput.astro";
 import Arrowbutton from "../components/Arrowbutton.astro";
 import SwitchToggle from "../components/SwitchToggle.astro";
-import Progressbar from "../components/Progressbar.astro";
 import Checkbox from "../components/Checkbox.astro";
 import Heading from "../components/Heading.astro";
 ---
 
-  <!-- STEP 1 BETALINGSFORM -->
-<section class="flex flex-col items-center justify-center gap-4 p-4">
+<!-- STEP 1 BETALINGSFORM -->
+<section id="step1" class="flex flex-col items-center justify-center gap-4 p-4">
+  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+    <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+      <progress class="progress w-full rounded-full my-progress" value="25" max="100"></progress>
 
-    <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
-  
-      <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
-  
-        <progress class="progress w-full rounded-full my-progress" value="25" max="100"></progress>
-  
-        <SwitchToggle></SwitchToggle>
-  
-        <Text teksttype="brødtekst" font="sans" color="white">
-          250 kr. = undervisning og skolematerialer til en pige i et år
-        </Text>
-  
-        <section class="grid grid-cols-2 gap-2 justify-items-center">
-          <Button variant="primary" size="large">50 kr.</Button>
-          <Button variant="primary" size="medium">100 kr.</Button>
-        </section>
-  
-        <section class="grid grid-cols-2 gap-2 justify-items-center">
-          <Button variant="primary" size="medium">250 kr.</Button>
-          <Button variant="primary" size="medium">400 kr.</Button>
-        </section>
-  
-        <Textinput label="Andet beløb" placeholder="Indtast beløb her" />
-      </div>
+      <SwitchToggle />
 
-      <div class="flex justify-end w-full mt-4">
-        <Arrowbutton direction="forward" variant="primary" size="medium" />
-      </div>
-    
-      <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
-    </div>
-  </section>
+      <Text teksttype="brødtekst" font="sans" color="white">
+        250 kr. = undervisning og skolematerialer til en pige i et år
+      </Text>
 
-  <!-- STEP 2 BETALINGSFORM / PRIVATBETALING-->
-  <section class="flex flex-col items-center justify-center gap-4 p-4">
-
-    <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
-  
-      <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
-  
-        <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
-  
-        <Text teksttype="brødtekst" font="sans" color="white">
-          Tak at du vil støtte afghanske piger!
-        </Text>
-  
-        <Textinput label="Navn" placeholder="Fornavn" />
-        <Textinput label="Navn" placeholder="Efternavn" />
-        <section class="grid grid-cols-2 gap-2 justify-items-center">
-        <Textinput label="Navn" placeholder="Efternavn" />
-        <Textinput label="Navn" placeholder="Efternavn" />
+      <section class="grid grid-cols-2 gap-2 justify-items-center">
+        <Button variant="primary" size="large" onclick="selectAmount(50)">50 kr.</Button>
+        <Button variant="primary" size="medium" onclick="selectAmount(100)">100 kr.</Button>
       </section>
 
-        <Checkbox></Checkbox>
-  
-  <div class="flex justify-between w-full mt-4">
-    <Arrowbutton direction="back" variant="primary" size="medium" />
-    <Arrowbutton direction="forward" variant="primary" size="medium" />
+      <section class="grid grid-cols-2 gap-2 justify-items-center">
+        <Button variant="primary" size="medium" onclick="selectAmount(250)">250 kr.</Button>
+        <Button variant="primary" size="medium" onclick="selectAmount(400)">400 kr.</Button>
+      </section>
+
+      <Textinput label="Andet beløb" placeholder="Indtast beløb her" />
+    </div>
+
+    <div class="flex justify-end w-full mt-4">
+      <Arrowbutton direction="forward" variant="primary" size="medium" onclick="goStep1Forward()" />
+    </div>
+
+    <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
   </div>
+</section>
 
+<!-- STEP 2 BETALINGSFORM / PRIVATBETALING-->
+<section id="step2" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
+  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+    <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+      <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
+
+      <Text teksttype="brødtekst" font="sans" color="white">
+        Tak fordi du vil støtte afghanske piger!
+      </Text>
+
+      <Textinput label="Fornavn" placeholder="Fornavn" />
+      <Textinput label="Efternavn" placeholder="Efternavn" />
+      <Textinput label="Email" placeholder="Email" />
+      <Textinput label="Telefon" placeholder="Telefon" />
+
+      <Checkbox id="businessCheckbox" label="Jeg betaler på vegne af en virksomhed" />
+
+      <div class="flex justify-between w-full mt-4">
+        <Arrowbutton direction="back" variant="primary" size="medium" onclick="goStep2Back()" />
+        <Arrowbutton direction="forward" variant="primary" size="medium" onclick="goStep2Forward()" />
       </div>
-  
-      <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
-  
     </div>
-  
-  </section>
-  
-  <!-- STEP 2 BETALINGSFORM / VIRKSOMHED -->
-    <section class="flex flex-col items-center justify-center gap-4 p-4">
 
-      <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
-    
-        <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
-    
-          <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
-    
-          <Text teksttype="brødtekst" font="sans" color="white">
-            Tak at du vil støtte afghanske piger!
-          </Text>
-    
-          <Textinput label="Navn" placeholder="Fornavn" />
-          <Textinput label="Navn" placeholder="Efternavn" />
-          <section class="grid grid-cols-2 gap-2 justify-items-center">
-          <Textinput label="Navn" placeholder="Efternavn" />
-          <Textinput label="Navn" placeholder="Efternavn" />
-        </section>
-  
-          <Checkbox></Checkbox>
+    <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
+  </div>
+</section>
 
-          <section class="grid grid-cols-2 gap-2 justify-items-center">
-            <Textinput label="Navn" placeholder="Efternavn" />
-            <Textinput label="Navn" placeholder="Efternavn" />
-          </section>
-          <Textinput label="Navn" placeholder="Fornavn" />
-          <Textinput label="Navn" placeholder="Efternavn" />
-          <section class="grid grid-cols-2 gap-2 justify-items-center">
-          <Textinput label="Navn" placeholder="Efternavn" />
-          <Textinput label="Navn" placeholder="Efternavn" />
-        </section>
+<!-- STEP 2 BETALINGSFORM / VIRKSOMHED -->
+<section id="step2Business" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
+  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+    <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+      <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
 
-        <Checkbox></Checkbox>
-        
-        <div class="flex justify-between w-full mt-4">
-          <Arrowbutton direction="back" variant="primary" size="medium" />
-          <Arrowbutton direction="forward" variant="primary" size="medium" />
-        </div>
-        </div>
-    
-        <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
-    
+      <Text teksttype="brødtekst" font="sans" color="white">
+        Tak fordi du vil støtte afghanske piger som virksomhed!
+      </Text>
+
+      <Textinput label="Firmanavn" placeholder="Firmanavn" />
+      <Textinput label="CVR-nummer" placeholder="CVR" />
+      <Textinput label="Kontaktperson" placeholder="Kontaktperson" />
+      <Textinput label="Email" placeholder="Email" />
+      <Textinput label="Telefon" placeholder="Telefon" />
+      <Textinput label="Adresse" placeholder="Adresse" />
+      <Textinput label="Postnummer" placeholder="Postnummer" />
+      <Textinput label="By" placeholder="By" />
+
+      <div class="flex justify-between w-full mt-4">
+        <Arrowbutton direction="back" variant="primary" size="medium" onclick="goStep2BusinessBack()" />
+        <Arrowbutton direction="forward" variant="primary" size="medium" onclick="goStep2BusinessForward()" />
       </div>
-    
-    </section>
+    </div>
 
-  <!-- STEP 3 BETALINGSFORM -->
-      <section class="flex flex-col items-center justify-center gap-4 p-4">
+    <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
+  </div>
+</section>
 
-        <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
-      
-          <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
-      
-            <progress class="progress w-full rounded-full my-progress" value="75" max="100"></progress>
-      
-            <Text teksttype="brødtekst" font="sans" color="white">
-              Tak at du vil støtte afghanske piger!
-            </Text>
-            <Checkbox></Checkbox>
-      
-            <Textinput label="Navn" placeholder="Fornavn" />
-            <section class="grid grid-cols-2 gap-2 justify-items-center">
-            <Textinput label="Navn" placeholder="Efternavn" />
-            <Textinput label="Navn" placeholder="Efternavn" />
-          </section>
-    
-          <Checkbox></Checkbox>
-  
-          <div class="flex justify-between w-full mt-4">
-            <Arrowbutton direction="back" variant="primary" size="medium" />
-            <Arrowbutton direction="forward" variant="primary" size="medium" />
-          </div>
+<!-- STEP 3 BETALINGSFORM -->
+<section id="step3" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
+  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+    <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+      <progress class="progress w-full rounded-full my-progress" value="75" max="100"></progress>
 
-          </div>
-      
-          <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
-      
-        </div>
-      
+      <Text teksttype="brødtekst" font="sans" color="white">
+        Indtast dine betalingsoplysninger
+      </Text>
+
+      <Textinput label="Kortnummer" placeholder="1234 5678 9012 3456" />
+      <section class="grid grid-cols-2 gap-2 justify-items-center">
+        <Textinput label="Udløbsdato" placeholder="MM/ÅÅ" />
+        <Textinput label="CVC" placeholder="CVC" />
       </section>
-  
-  <!-- STEP 4 BETALINGSFORM -->
-    <section class="flex flex-col items-center justify-center gap-4 p-4">
+      <Textinput label="Navn på kort" placeholder="Som på kortet" />
 
-      <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
-    
-        <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
-    
-          <progress class="progress w-full rounded-full my-progress" value="100" max="100"></progress>
-          <Heading htmlheading="h2" size="medium" font="serif">Tak for din støtte!</Heading>
-
-          <Text teksttype="brødtekst" font="sans" color="white">
-            På grund af dig kan afghanske pigers drømme gå i opfyldelse
-          </Text>
-        </div>
-    
-        <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
-    
+      <div class="flex justify-between w-full mt-4">
+        <Arrowbutton direction="back" variant="primary" size="medium" onclick="goStep3Back()" />
+        <Arrowbutton direction="forward" variant="primary" size="medium" onclick="goStep3Forward()" />
       </div>
-    </section>
-        
-    
-  <style>
-    .my-progress::-moz-progress-bar {
+    </div>
+
+    <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
+  </div>
+</section>
+
+<!-- STEP 4 BETALINGSFORM -->
+<section id="step4" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
+  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+    <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+      <progress class="progress w-full rounded-full my-progress" value="100" max="100"></progress>
+      <Heading htmlheading="h2" size="medium" font="serif">Tak for din støtte!</Heading>
+
+      <Text teksttype="brødtekst" font="sans" color="white">
+        På grund af dig kan afghanske pigers drømme gå i opfyldelse
+      </Text>
+
+      <div class="flex justify-start w-full mt-4">
+        <Arrowbutton direction="back" variant="primary" size="medium" onclick="goStep4Back()" />
+      </div>
+    </div>
+
+    <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
+  </div>
+</section>
+
+<style>
+.my-progress::-moz-progress-bar {
   background-color: #B9534B; /* DIN FARVE */
   border-radius: 100px;
 }
+</style>
 
-  </style>
+<script>
+let selectedAmount = null;
+
+function selectAmount(amount) {
+  selectedAmount = amount;
+  console.log("Valgt beløb:", selectedAmount);
+}
+
+// Step 1 → Step 2 privat
+function goStep1Forward() {
+  document.getElementById('step1').style.display = 'none';
+  document.getElementById('step2').style.display = 'flex';
+}
+
+// Step 2 privat → Step1
+function goStep2Back() {
+  document.getElementById('step2').style.display = 'none';
+  document.getElementById('step1').style.display = 'flex';
+}
+
+// Step 2 privat → Step 3 eller Step 2Business
+function goStep2Forward() {
+  if (document.getElementById('businessCheckbox').checked) {
+    document.getElementById('step2').style.display = 'none';
+    document.getElementById('step2Business').style.display = 'flex';
+  } else {
+    document.getElementById('step2').style.display = 'none';
+    document.getElementById('step3').style.display = 'flex';
+  }
+}
+
+// Step 2Business → Step 2 privat
+function goStep2BusinessBack() {
+  document.getElementById('step2Business').style.display = 'none';
+  document.getElementById('step2').style.display = 'flex';
+}
+
+// Step 2Business → Step 3
+function goStep2BusinessForward() {
+  document.getElementById('step2Business').style.display = 'none';
+  document.getElementById('step3').style.display = 'flex';
+}
+
+// Step 3 → Step 2 eller Step 2Business
+function goStep3Back() {
+  document.getElementById('step3').style.display = 'none';
+  if (document.getElementById('businessCheckbox') && document.getElementById('businessCheckbox').checked) {
+    document.getElementById('step2Business').style.display = 'flex';
+  } else {
+    document.getElementById('step2').style.display = 'flex';
+  }
+}
+
+// Step 3 → Step 4
+function goStep3Forward() {
+  document.getElementById('step3').style.display = 'none';
+  document.getElementById('step4').style.display = 'flex';
+}
+
+// Step 4 → Step 3
+function goStep4Back() {
+  document.getElementById('step4').style.display = 'none';
+  document.getElementById('step3').style.display = 'flex';
+}
+</script>
