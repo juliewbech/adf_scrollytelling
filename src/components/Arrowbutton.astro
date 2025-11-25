@@ -1,4 +1,6 @@
 ---
+import { hover } from "motion";
+
 const {
   direction = "forward", // "forward" | "back"
   variant = "primary",
@@ -11,9 +13,8 @@ const baseClasses =
 
 // VARIANT-STYLES
 const variantClasses = {
-  primary: "bg-primary-500",
-  secondary: "bg-secondary-500",
-  glass: "bg-white/20 backdrop-blur-md border border-white/40"
+  primary: "bg-white hover:bg-primary-200",
+  secondary: "bg-grey hover:bg-primary-200",
 };
 
 // STØRRELSER
@@ -31,7 +32,7 @@ const sizeClasses = {
     height="50px"
     viewBox="0 0 24 24"
     class:list={[
-      "stroke-white transition-transform duration-200",
+      "stroke-primary-500 transition-transform duration-200",
       direction === "back" ? "rotate-180" : ""
     ]}
   >

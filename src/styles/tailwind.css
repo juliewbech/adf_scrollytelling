@@ -11,8 +11,10 @@ html {
 
 @theme {
   --color-white: #fafafa;
+  --color-gray: #cfcfcf;
   --color-black: #494949;
   --color-glass: #fafafa;
+  --color-primary-200: #e8b8b6;
   --color-primary-400: #d96f67;
   --color-primary-500: #b9534b;
   --color-primary-600: #96423b;
