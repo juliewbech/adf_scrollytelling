@@ -5,14 +5,18 @@ import Textinput from "../components/Textinput.astro";
 import Arrowbutton from "../components/Arrowbutton.astro";
 import SwitchToggle from "../components/SwitchToggle.astro";
 import Progressbar from "../components/Progressbar.astro";
+import Checkbox from "../components/Checkbox.astro";
+import Heading from "../components/Heading.astro";
 ---
+
+  <!-- STEP 1 BETALINGSFORM -->
 <section class="flex flex-col items-center justify-center gap-4 p-4">
 
     <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
   
       <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
   
-        <progress class="progress w-full rounded-full my-progress" value="33" max="100"></progress>
+        <progress class="progress w-full rounded-full my-progress" value="25" max="100"></progress>
   
         <SwitchToggle></SwitchToggle>
   
@@ -40,7 +44,137 @@ import Progressbar from "../components/Progressbar.astro";
     </div>
   
   </section>
+
+  <!-- STEP 2 BETALINGSFORM / PRIVATBETALING-->
+  <section class="flex flex-col items-center justify-center gap-4 p-4">
+
+    <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
   
+      <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+  
+        <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
+  
+        <Text teksttype="brødtekst" font="sans" color="white">
+          Tak at du vil støtte afghanske piger!
+        </Text>
+  
+        <Textinput label="Navn" placeholder="Fornavn" />
+        <Textinput label="Navn" placeholder="Efternavn" />
+        <section class="grid grid-cols-2 gap-2 justify-items-center">
+        <Textinput label="Navn" placeholder="Efternavn" />
+        <Textinput label="Navn" placeholder="Efternavn" />
+      </section>
+
+        <Checkbox></Checkbox>
+  
+        <Arrowbutton></Arrowbutton>
+        <Arrowbutton></Arrowbutton>
+      </div>
+  
+      <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
+  
+    </div>
+  
+  </section>
+  
+  <!-- STEP 2 BETALINGSFORM / VIRKSOMHED -->
+    <section class="flex flex-col items-center justify-center gap-4 p-4">
+
+      <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+    
+        <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+    
+          <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
+    
+          <Text teksttype="brødtekst" font="sans" color="white">
+            Tak at du vil støtte afghanske piger!
+          </Text>
+    
+          <Textinput label="Navn" placeholder="Fornavn" />
+          <Textinput label="Navn" placeholder="Efternavn" />
+          <section class="grid grid-cols-2 gap-2 justify-items-center">
+          <Textinput label="Navn" placeholder="Efternavn" />
+          <Textinput label="Navn" placeholder="Efternavn" />
+        </section>
+  
+          <Checkbox></Checkbox>
+
+          <section class="grid grid-cols-2 gap-2 justify-items-center">
+            <Textinput label="Navn" placeholder="Efternavn" />
+            <Textinput label="Navn" placeholder="Efternavn" />
+          </section>
+          <Textinput label="Navn" placeholder="Fornavn" />
+          <Textinput label="Navn" placeholder="Efternavn" />
+          <section class="grid grid-cols-2 gap-2 justify-items-center">
+          <Textinput label="Navn" placeholder="Efternavn" />
+          <Textinput label="Navn" placeholder="Efternavn" />
+        </section>
+
+        <Checkbox></Checkbox>
+
+          <Arrowbutton></Arrowbutton>
+          <Arrowbutton></Arrowbutton>
+        </div>
+    
+        <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
+    
+      </div>
+    
+    </section>
+
+  <!-- STEP 3 BETALINGSFORM -->
+      <section class="flex flex-col items-center justify-center gap-4 p-4">
+
+        <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+      
+          <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+      
+            <progress class="progress w-full rounded-full my-progress" value="75" max="100"></progress>
+      
+            <Text teksttype="brødtekst" font="sans" color="white">
+              Tak at du vil støtte afghanske piger!
+            </Text>
+            <Checkbox></Checkbox>
+      
+            <Textinput label="Navn" placeholder="Fornavn" />
+            <section class="grid grid-cols-2 gap-2 justify-items-center">
+            <Textinput label="Navn" placeholder="Efternavn" />
+            <Textinput label="Navn" placeholder="Efternavn" />
+          </section>
+    
+          <Checkbox></Checkbox>
+  
+            <Arrowbutton></Arrowbutton>
+            <Arrowbutton></Arrowbutton>
+          </div>
+      
+          <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
+      
+        </div>
+      
+      </section>
+  
+  <!-- STEP 3 BETALINGSFORM -->
+    <section class="flex flex-col items-center justify-center gap-4 p-4">
+
+      <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+    
+        <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+    
+          <progress class="progress w-full rounded-full my-progress" value="100" max="100"></progress>
+          <Heading htmlheading="h2" size="medium" font="serif">Tak for din støtte!</Heading>
+
+          <Text teksttype="brødtekst" font="sans" color="white">
+            På grund af dig kan afghanske pigers drømme gå i opfyldelse
+          </Text>
+        </div>
+    
+        <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
+    
+      </div>
+    </section>
+        
+    
   <style>
     .my-progress::-moz-progress-bar {
   background-color: #B9534B; /* DIN FARVE */
