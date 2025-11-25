@@ -1,0 +1,31 @@
+---
+import Heading from "../components/Heading.astro";
+import Button from "../components/Button.astro";
+
+const { url="#", cardimage="", cardimagealt="", cardtitel="", cardbuttontekst=""
+ } = Astro.props;
+---
+
+<div class="p-8">
+    <div 
+      class="group relative shadow-xl rounded-xl overflow-hidden h-100 bg-cover bg-center"
+      style={`background-image: url('${cardimage}')`}
+    >
+  
+      <!-- ONLY the overlay has blur -->
+      <div class="hover:hidden absolute inset-0 bg-primary-500/30  z-10 
+                  transition-all duration-500 
+                  group-hover:bg-transparent group-hover:backdrop-blur-0">
+      </div>
+  
+      <!-- Button -->
+      <div class="absolute inset-0 flex items-end p-4 justify-center z-20">
+        <Button href={url} variant="primary" size="medium">
+          {cardbuttontekst}
+        </Button>
+      </div>
+  
+    </div>
+  </div>
+  
+  

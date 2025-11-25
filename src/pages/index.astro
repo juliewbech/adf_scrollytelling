@@ -8,6 +8,7 @@ import Header from "../components/Header.astro";
 import Tidslinje from "../components/Tidslinje.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
 import Betalingsform from "../components/Betalingsform.astro";
 ---
 <MainLayout title="Afghan Daanish Foundation - kampagneside">
@@ -592,16 +593,35 @@ import Betalingsform from "../components/Betalingsform.astro";
 
  <!-- SECTION 16 -->
  <article>
-	<div class=" top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/BJm1nUO.png')" >
-		<section class="md:grid grid-cols-3">
+	<div class=" top-0 left-0 right-0 bottom-0 w-full bg-white p-8 text-center" >
+		<Heading htmlheading="h1" size="medium" font="serif" color="black">Andre måder du kan støtte på</Heading>
+		<section class="md:grid grid-cols-3 md:mx-8">
 			<div>
-				<img src="https://i.imgur.com/nX1AEvN.png" alt="half portrait">
+				<div>
+					<Card
+					cardimage="https://i.imgur.com/dswvjKW.jpeg"
+					cardimagealt=""
+					cardbuttontekst="Køb i vores shop"
+					></Card>
+				</div>
 			</div>
 			<div>
-				<img src="https://i.imgur.com/nX1AEvN.png" alt="half portrait">
+				<div>
+					<Card
+					cardimage="https://i.imgur.com/02fLJF9.png"
+					cardimagealt=""
+					cardbuttontekst="Book et foredrag"
+					></Card>
+				</div>
 			</div>
 			<div>
-				<img src="https://i.imgur.com/nX1AEvN.png" alt="half portrait">
+				<div>
+					<Card
+					cardimage="https://i.imgur.com/O7LBzTb.jpeg"
+					cardimagealt=""
+					cardbuttontekst="Del budskabet"
+					></Card>
+				</div>
 			</div>
 		</section>
 	</div>
