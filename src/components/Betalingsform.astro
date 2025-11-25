@@ -20,17 +20,19 @@ import Heading from "../components/Heading.astro";
         250 kr. = undervisning og skolematerialer til en pige i et år
       </Text>
 
-      <section class="grid grid-cols-2 gap-2 justify-items-center">
-        <Button variant="primary" size="large" onclick="selectAmount(50)">50 kr.</Button>
-        <Button variant="primary" size="medium" onclick="selectAmount(100)">100 kr.</Button>
+      <section class="grid grid-cols-2 gap-8 justify-items-center">
+        <Button variant="tertiary" size="xlarge" onclick="selectAmount(50)">50 kr.</Button>
+        <Button variant="tertiary" size="xlarge" onclick="selectAmount(100)">100 kr.</Button>
       </section>
 
-      <section class="grid grid-cols-2 gap-2 justify-items-center">
-        <Button variant="primary" size="medium" onclick="selectAmount(250)">250 kr.</Button>
-        <Button variant="primary" size="medium" onclick="selectAmount(400)">400 kr.</Button>
+      <section class="grid grid-cols-2 gap-8 justify-items-center">
+        <Button variant="tertiary" size="xlarge" onclick="selectAmount(250)">250 kr.</Button>
+        <Button variant="tertiary" size="xlarge" onclick="selectAmount(400)">400 kr.</Button>
       </section>
 
+      <div class="pt-4 w-sm">
       <Textinput label="Andet beløb" placeholder="Indtast beløb her" />
+    </div>
     </div>
 
     <div class="flex justify-end w-full mt-4">
