@@ -35,14 +35,14 @@ import Heading from "../components/Heading.astro";
         </section>
   
         <Textinput label="Andet beløb" placeholder="Indtast beløb her" />
-  
-        <Arrowbutton></Arrowbutton>
       </div>
-  
+
+      <div class="flex justify-end w-full mt-4">
+        <Arrowbutton direction="forward" variant="primary" size="medium" />
+      </div>
+    
       <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
-  
     </div>
-  
   </section>
 
   <!-- STEP 2 BETALINGSFORM / PRIVATBETALING-->
@@ -67,8 +67,11 @@ import Heading from "../components/Heading.astro";
 
         <Checkbox></Checkbox>
   
-        <Arrowbutton></Arrowbutton>
-        <Arrowbutton></Arrowbutton>
+  <div class="flex justify-between w-full mt-4">
+    <Arrowbutton direction="back" variant="primary" size="medium" />
+    <Arrowbutton direction="forward" variant="primary" size="medium" />
+  </div>
+
       </div>
   
       <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
@@ -111,9 +114,11 @@ import Heading from "../components/Heading.astro";
         </section>
 
         <Checkbox></Checkbox>
-
-          <Arrowbutton></Arrowbutton>
-          <Arrowbutton></Arrowbutton>
+        
+        <div class="flex justify-between w-full mt-4">
+          <Arrowbutton direction="back" variant="primary" size="medium" />
+          <Arrowbutton direction="forward" variant="primary" size="medium" />
+        </div>
         </div>
     
         <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
@@ -144,8 +149,11 @@ import Heading from "../components/Heading.astro";
     
           <Checkbox></Checkbox>
   
-            <Arrowbutton></Arrowbutton>
-            <Arrowbutton></Arrowbutton>
+          <div class="flex justify-between w-full mt-4">
+            <Arrowbutton direction="back" variant="primary" size="medium" />
+            <Arrowbutton direction="forward" variant="primary" size="medium" />
+          </div>
+
           </div>
       
           <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
@@ -154,7 +162,7 @@ import Heading from "../components/Heading.astro";
       
       </section>
   
-  <!-- STEP 3 BETALINGSFORM -->
+  <!-- STEP 4 BETALINGSFORM -->
     <section class="flex flex-col items-center justify-center gap-4 p-4">
 
       <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">

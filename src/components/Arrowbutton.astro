@@ -1,9 +1,45 @@
 ---
----
+const {
+  direction = "forward", // "forward" | "back"
+  variant = "primary",
+  size = "medium"
+} = Astro.props;
 
-<button class="cursor-pointer duration-200 hover:scale-125 active:scale-100 bg-primary-500 rounded-full">
-    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" class="stroke-white">
-      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" d="M13 6L19 12M19 12L13 18M19 12H5"></path>
-    </svg>
-  </button>
-  
+// BASIS STYLING
+const baseClasses =
+  "cursor-pointer duration-200 hover:scale-125 active:scale-100 rounded-full flex items-center justify-center";
+
+// VARIANT-STYLES
+const variantClasses = {
+  primary: "bg-primary-500",
+  secondary: "bg-secondary-500",
+  glass: "bg-white/20 backdrop-blur-md border border-white/40"
+};
+
+// STØRRELSER
+const sizeClasses = {
+  large: "w-20 h-20",
+  medium: "w-14 h-14",
+  small: "w-10 h-10"
+};
+---
+<button class:list={[baseClasses, variantClasses[variant], sizeClasses[size]]}>
+  <!-- Pilen — hvis back, roterer vi den 180° -->
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="50px"
+    height="50px"
+    viewBox="0 0 24 24"
+    class:list={[
+      "stroke-white transition-transform duration-200",
+      direction === "back" ? "rotate-180" : ""
+    ]}
+  >
+    <path
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="1.5"
+      d="M13 6L19 12M19 12L13 18M19 12H5"
+    ></path>
+  </svg>
+</button>
