@@ -15,26 +15,30 @@ const currentPath = pathname.slice(1); // remove the first "/"
         </div>
         <nav id="desktopmenu" class="hidden lg:block">
             <ul class="flex flex-row gap-4 font-paragraf font-semibold text-xl text-white items-center">
-                <Text><Link href="/" variant="primary" size="small">Minas historie</Link></Text>
-                <Text><Link href="/komponentbibliotek/" variant="primary" size="small">Afghanistans historie</Link></Text>
-                <Text><Link href="#" variant="primary" size="small">ADF & vores arbejde</Link></Text>
-                <Text><Link href="#" variant="primary" size="small">Sådan støtter du</Link></Text>
-                <Button variant="primary"size="medium">Støt nu</Button>
+                <Text><Link href="#section1" variant="primary" size="small">Minas historie</Link></Text>
+                <Text><Link href="#section9" variant="primary" size="small">Afghanistans historie</Link></Text>
+                <Text><Link href="#section12" variant="primary" size="small">ADF & vores arbejde</Link></Text>
+                <Text><Link href="#section21" variant="primary" size="small">Sådan støtter du</Link></Text>
+                <a href="#section21"><Button variant="primary"size="medium">Støt nu</Button></a>
                 <MusicToggle />
             </ul>
         </nav>
-        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="size-8">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
 </button>
     </div>
     <nav id="mobilmenu" class="flex flex-col content-center" 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-        <ul class="border-t-2 border-b-2 border-black">
-            <li class="text-center py-2"><a href="/" class="">Minas historie</a></li>
-            <li class="text-center py-2"><a href="" class="">Afghanistans situation</a></li>
-            <li class="text-center py-2"><a href="" class="">ADF & arbejdet</a></li>
-            <li class="text-center py-2"><a href="" class="">Sådan støtter du</a></li>
+        <ul class="bg-white pt-4 rounded-md drop-shadow-md">
+            <Text><Link href="#section1" variant="secondary" size="small" color="black">Minas historie</Link></Text>
+                <Text><Link href="#section9" variant="secondary" size="small" color="black">Afghanistans historie</Link></Text>
+                <Text><Link href="#section12" variant="secondary" size="small" color="black">ADF & vores arbejde</Link></Text>
+                <Text><Link href="#section21" variant="secondary" size="small" color="black">Sådan støtter du</Link></Text>
+                <section class="grid grid-cols-2 justify-items-center p-4">
+                <a href="#section21"><Button variant="primary"size="medium" color="black">Støt nu</Button></a>
+                <MusicToggle />
+            </section>
         </ul>
     </nav>
 </header>
