@@ -5,18 +5,18 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
 import Header from "../components/Header.astro";
-import Tidslinje from "../components/Tidslinje.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import FacebookPost from "../components/FacebookPost.astro";
 import Betalingsform from "../components/Betalingsform.astro";
 ---
-<MainLayout title="Afghan Daanish Foundation - kampagneside">
-	<body>
+<MainLayout title="Hendes fremtid - Afghan Daabnish Foundation">
+<body>
 	<main>
 
-		<section>
+	<!-- HERO SECTION -->
+	<section id="hero-section">
 			<div class="hero min-h-screen relative overflow-hidden">
 			  
 			  {/* Video baggrund */}
@@ -31,7 +31,7 @@ import Betalingsform from "../components/Betalingsform.astro";
 				Din browser understøtter ikke HTML5 video.
 			  </video>
 		  
-			  {/* Header placeres absolut */}
+			  {/* Header & progressbar */}
 			  <div class="absolute top-2 p-2 w-full z-50">
 		<div class="progress-bar h-4 fixed w-full bg-primary-600 left-0 origin-top-left top-0 right-0"></div>
 
@@ -73,56 +73,49 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 
 		</div>
 			</div>
-		  </section>
+	</section>
 
-		  <article id="section1">
+	<!-- SECTION 1 - KORT OVER MELLEMØSTEN -->
+	<article id="section1">
 		  <section class="scrollzoom overflow-clip">
-				<img src="https://i.imgur.com/1wxy7cZ.png" class="scrollzoomimg w-full" alt="">
+				<img src="https://i.imgur.com/1wxy7cZ.png" class="scrollzoomimg w-full" alt="kort over mellemøsten">
 			</section> 
-		</article>
+	</article>
 
-	<!-- SECTION 1 -->
-	<article>
+	<!-- SECTION 2 - MINAS HISTORIE PART 1 -->
+	<article id="section2">
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/7z6EyAx.png')" ><!-- sticky elementet med lidt ekstra indhold -->
 			<div class="flex justify-start h-full">
 				<div class="flex flex-col w-full md:w-1/2  justify-center gap-4 p-4 ">
-					<div class="">
-						<img src="" alt="">
-					</div>
-					<div class="bg-slate-100">
-						<img src="" alt="">
-					</div>
 				</div>
 			</div>
 		</div>
-
-	<!-- SECTION 2 -->
 		<div class="relative flex justify-end">
 			<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-200
 			 p-4">
 				<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="black">
 						Mød Mina. En helt almindelig afghansk pige på 13 år.
 						</Text>
 				</div>
 				<div class="bg-slate-100 text-center py-2 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
-						Mina er bosiddende i Mashhad i Razavi Khorasan-provinsen i Iran.
+					<Text teksttype="brødtekst" font="sans" color="black">
+						Mina bor i Mashhad i Razavi Khorasan-provinsen i Iran.
 						</Text>
 				</div>
 				<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="black">
 						Ligesom mange andre afghanere flyttede hendes familie til Iran for at skabe sig en bedre tilværelse tilbage i 1980, efter at Sovjetunionen invaderede Afghanistan.
 						</Text>
 				</div>
 				<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="black">
 						Mina ser Iran som sit hjem. Her er hun født og opvokset. 
 						Her har hun sine venner og tætteste familie. 
 						</Text>
 				</div>
 				<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="black">
 						Mina går i også i skole, som hun elsker. Hun drømmer om 
 						at læse medicin en dag, så hun kan blive læge og hjælpe
 						mennesker i nød.
@@ -133,47 +126,47 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		<div class="h-[100vh]"></div>
 	</article>
 
-	<!-- SECTION 3 -->
+	<!-- SECTION 3 - MINAS HISTORIE PART 2-->
+	<section id="section3">
 	<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
-		<p class="w-3/4 lg:w-1/2 mx-auto p-10 bg-white text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">Men en dag ændrede alt sig...</p>
+		<div class="w-3/4 lg:w-1/2 mx-auto p-4 bg-white text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">
+			<Text teksttype="brødtekst" font="sans" color="black">
+				Men en dag ændrede alt sig for Mina og hendes familie...
+				</Text></div>
+		
 	</div>
+	</section>
 
-	<!-- SECTION 4 -->
-	<article>
-		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/dnM7IoN.png')" ><!-- sticky elementet med lidt ekstra indhold -->
+	<!-- SECTION - 4 MINAS HISTORIE PART 3-->
+	<article id="section4">
+		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/dnM7IoN.png')" >
 			<div class="flex justify-end h-full">
 				<div class="flex flex-col w-full md:w-1/2  justify-center gap-4 p-4 ">
-					<div class="bg-slate-100">
-						<img src="" alt="">
-					</div>
-					<div class="bg-slate-100">
-						<img src="" alt="">
-					</div>
 				</div>
 			</div>
 		</div>
 		<div class="relative flex justify-start">
-			<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-8
+			<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-200
 			 p-4">
 			 <div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-				<Text teksttype="brødtekst">
+				<Text teksttype="brødtekst" font="sans" color="black">
 					I sommeren 2025 annoncerede Iran at alle afghanere
 					skulle hjemsendes til Afghanistan. 
 					</Text>
 			</div>
 			<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-				<Text teksttype="brødtekst">
+				<Text teksttype="brødtekst" font="sans" color="black">
 					Mina, hendes 7 søskende og forældre blev tvangsudsendt
 					d. 24 juni 2025
 					</Text>
 			</div>
 			<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-				<Text teksttype="brødtekst">
+				<Text teksttype="brødtekst" font="sans" color="black">
 					Tvangsudsendt til en land, hvor hun har rødder, men ingen kendskab.
 					</Text>
 			</div>
 			<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-				<Text teksttype="brødtekst">
+				<Text teksttype="brødtekst" font="sans" color="black">
 					Tvagsudsendt til at land, som hendes forældre desperat flygtede fra for over 40 år siden.
 					</Text>
 			</div>
@@ -182,49 +175,43 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		<div class="h-[100vh]"></div>
 	</article>
 
-	<!-- SECTION 5 -->
+	<!-- SECTION 5 - MINAS HISTORIE PART 4-->
+	<section id="section5">
 	<div class="flex items-center h-screen w-full bg-cover bg-center bg-black" >
-		<p class="w-3/4 lg:w-1/2 mx-auto p-10 bg-white text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">Men hvad var det egentlig at familien flyttede til?</p>
+		<div class="w-3/4 lg:w-1/2 mx-auto p-4 bg-white text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">
+			<Text teksttype="brødtekst" font="sans" color="black">
+				Hvad var det for et land Mina og hendes familie blev sendt til?
+			</Text></div>
 	</div>
+	</section>
 
-	<!-- SECTION 6 -->
-		<article>
+	<!-- SECTION 6 - MINAS HISTORIE PART 5-->
+	<article id="section6">
 			<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/8xSy15c.png')" ><!-- sticky elementet med lidt ekstra indhold -->
 				<div class="flex justify-start h-full">
 					<div class="flex flex-col w-full md:w-1/2  justify-center gap-4 p-4 ">
-						<!-- <div class="bg-slate-100">
-							<img src="https://i.imgur.com/VEhXUgB.jpeg" alt="">
-						</div>
-						<div class="bg-slate-100">
-							<img src="https://i.imgur.com/VEhXUgB.jpeg" alt="">
-						</div> -->
 					</div>
 				</div>
 			</div>
 			<div class="relative flex justify-end">
-				<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-8
+				<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-200
 				 p-4">
-				 <div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
-						Tvagsudsendt til at land, som hendes forældre desperat flygtede fra for over 40 år siden.
-						</Text>
-				</div>
 				<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="black">
 						Mina og hendes familie så ingen anden udvej end at flytte 
 						til den kigshærgede hovedstad Kabul, som er stærkt 
 						præget af fattigdom.
 						</Text>
 				</div>
 				<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="black">
 						Tilbage i 2021 overtog den islamistiske bevægelse Taliban 
 						igen magten efter 20 år med oprør mod den daværende 
 						regering og internationale styrker.
 						</Text>
 				</div>
 				<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="black">
 						Taliban var hurtige til at indføre lovkrav, som ville komme til at 
 						påvirke afghanernes hverdag
 						</Text>
@@ -232,76 +219,74 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				</div>
 			</div>
 			<div class="h-[100vh]"></div>
-		</article>
+	</article>
 
-	<!-- SECTION 7 -->
+	<!-- SECTION 7 - MINAS HISTORIE PART 6-->
+	<section id="section7">
 	<div class="flex items-center h-screen w-full bg-cover bg-center bg-black" >
-		<p class="w-3/4 lg:w-1/2 mx-auto p-10 bg-white text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">... men særligt hverdagen for de piger og kvinder.</p>
-	</div>
+		<div class="w-3/4 lg:w-1/2 mx-auto p-4 bg-white text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">
+			<Text teksttype="brødtekst" font="sans" color="black">
+				...Men hverdagen for piger og kvinder. 
+			</Text></div>
+	</section>
 
-	<!-- SECTION 8 -->
-		<article>
+	<!-- SECTION 8 - MINAS HISTORIE PART 7-->
+	<article id="section8">
 			<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/pJLzTeo.png')" ><!-- sticky elementet med lidt ekstra indhold -->
 				<div class="flex justify-start h-full">
 					<div class="flex flex-col w-full md:w-1/2  justify-center gap-4 p-4 ">
-						<!-- <div class="bg-slate-100">
-							<img src="https://i.imgur.com/VEhXUgB.jpeg" alt="">
-						</div>
-						<div class="bg-slate-100">
-							<img src="https://i.imgur.com/VEhXUgB.jpeg" alt="">
-						</div> -->
 					</div>
 				</div>
 			</div>
 			<div class="relative flex justify-end">
-				<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-8
+				<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-200
 				 p-4">
 				 <div class="bg-primary-600 text-white text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="white">
 						Det betyder, at Mina nu skal være fuldt tildækket i en 
 						mørk niqab offentligheden.
 						</Text>
 				</div>
 				<div class="bg-primary-600 text-white text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="white">
 						Mina må ikke gå uden for en dør uden en mandlig ledsager.
 						</Text>
 				</div> 
 				<div class="bg-primary-600 text-white text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="white">
 						Mina må ikke rejse inden- eller udenrigs, uden en mand 
 						og en skriftlig legitim grund.
 						</Text>
 				</div>
 				<div class="bg-primary-600 text-white text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst"font="sans" color="white">
 						Mina må ikke besøge parker, fitnesscentre, 
 						skønhedssaloner eller historiske monumenter.
 						</Text>
 				</div>
 				<div class="bg-primary-600 text-white text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="white">
 						Mina må ikke tale, synge, danse eller grine i det offentlige rum.
 						</Text>
 				</div>
 				<div class="bg-primary-600 text-white text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="white">
 						Vinduerne fra Minas værelse skal tildækkes i bygninger, der vender ud mod offentligheden.
 						</Text>
 				</div>
 				<div class="bg-primary-600 text-white text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="white">
 						Og Mina må ikke gå i skole eller studere da hun er over 12 år og over grundskolealderen.
 						</Text>
 				</div>
 				<div class="bg-primary-600 text-white text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="white">
 						Hun kan risikere at straffes med piskeslag og stening,
 						hvis hun bryder nogle af disse regler.
 						</Text>
 				</div>
 				<div class="bg-primary-600 text-white text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="white">
 						Mina må give afkald på hendes frihed og hendes drøm
 						om at blive læge.
 						</Text>
@@ -309,12 +294,13 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				</div>
 			</div>
 			<div class="h-[100vh]"></div>
-		</article>
+	</article>
 
-	<!-- SECTION 9 -->
-		 <div class="bg-white p-8">
+	<!-- SECTION 9 - TIDSLINJE OVER AFGHANISTAN DE SIDSTE 30 ÅR-->
+	<section id="section9">
+	<div class="bg-white p-8">
 			<Heading htmlheading="h2" size="large" font="serif" color="black">Afghanistan de sidste 30 år</Heading>
-		 </div>
+	</div>
 
 		 <div class="overflow-clip bg-white">
 			<section id="horisontalscrollsection" class="h-[1000vw]">
@@ -329,7 +315,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 								</Text>
 							</div></figure></li>
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[900px]"><img src="https://i.imgur.com/UXkzMOM.jpeg" alt="Sovjetiske tropper i Afghanistan">
+						<figure class="flex flex-row max-w-[900px]"><img src="https://i.imgur.com/UXkzMOM.jpeg" alt="Taliban i 1996">
 							<figcaption class="pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">1996</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban kommer til magten for første gang</Heading>
@@ -338,7 +324,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</Text>
 							</figcaption></figure></li>
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/mbVdER8.png" alt="Sovjetiske tropper i Afghanistan">
+						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/mbVdER8.png" alt="9/11">
 							<figcaption class="pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">11 september 2001</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Terrorangrebene på World Trade Center i USA d. 11 september</Heading>
@@ -347,7 +333,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</Text>
 									</figcaption></figure></li>
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/icmhsLA.png" alt="Sovjetiske tropper i Afghanistan">
+						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/icmhsLA.png" alt="Taliban bliver afsat">
 							<figcaption class="pl-4">
 								 	<Heading htmlheading="h2" size="large" font="serif" color="red">Oktober 2001</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban bliver afsat</Heading>
@@ -356,7 +342,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</Text>
 									</figcaption></figure></li>
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/OnKWj1h.png" alt="Sovjetiske tropper i Afghanistan">
+						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/OnKWj1h.png" alt="Fremskidt">
 							<figcaption class="pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">2001–2021</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">To årtier med håb og fremskridt</Heading>
@@ -365,7 +351,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</Text>
 									</figcaption></figure></li>				
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/m4bS3ME.png" alt="Sovjetiske tropper i Afghanistan">
+						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/m4bS3ME.png" alt="Angreb på pigeskole i Kabul">
 							<figcaption class="pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">Maj 2021</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Angreb på en pigeskole i Kabul</Heading>
@@ -374,7 +360,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</Text>
 									</figcaption></figure></li>	
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/uQQ50at.png" alt="Sovjetiske tropper i Afghanistan">
+						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/uQQ50at.png" alt="Taliban overtager magten igen">
 							<figcaption class="pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">August 2021</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban overtager magten igen</Heading>
@@ -383,7 +369,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</Text>
 									</figcaption></figure></li>	
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/Ok9RKjN.png" alt="Sovjetiske tropper i Afghanistan">
+						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/Ok9RKjN.png" alt="Talibans forbud mod pigers skolegang">
 							<figcaption class="pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">Efteråret 2021</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban forbyder piger at gå i skole efter sjette klasse</Heading>
@@ -392,7 +378,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</Text>
 									</figcaption></figure></li>		
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/k7lSI2b.png" alt="Sovjetiske tropper i Afghanistan">
+						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/k7lSI2b.png" alt="Talibans forbud mod kvinder i arbejde">
 							<figcaption class="pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">2022</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Nye restriktioner mod kvinder</Heading>
@@ -402,7 +388,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</Text>
 									</figcaption></figure></li>				
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/inyizHu.png" alt="Sovjetiske tropper i Afghanistan">
+						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/inyizHu.png" alt="Taliban forbyder kvinders stemmer offentligt">
 							<figcaption class="pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">August 2024</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban forbyder, at kvinders stemmer må høres offentligt</Heading>
@@ -413,9 +399,10 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				</ul>
 			</section>
 		</div>
+	</section>
 
-		<!-- SECTION 6 -->
-		<section class="bg-fffff h-[100vh] mx-auto p-8">
+	<!-- SECTION 10 - DATAVIZ:UNGDOMSLÆSEFÆRDIGHED -->
+	<section id="section10" class="bg-fffff h-[100vh] mx-auto p-8">
 			<div class="pt-40">
 			<Heading htmlheading="h2" size="large" font="serif" color="black">Ungdomslæsefærdighed i Afghanistan i 2022</Heading>
 		</div>
@@ -425,13 +412,16 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			<div class="flourish-embed flourish-chart md:pt-10 md:mx-8 xs:pt-10" data-src="visualisation/26180539"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26180539/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 	</section>
 
-		 <!-- SECTION 7 -->
-		 <div class="flex items-center h-screen w-full bg-cover bg-center bg-secondary-500" >
-			<p class="w-3/4 lg:w-1/2 mx-auto p-10 bg-white md:text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">Men DU kan være med til at ændre den yngre generation skæbne</p>
-		</div>
+	<!-- SECTION 11 - MEN DU KAN VÆRE MED -->
+	<div id="section11" class="flex items-center h-screen w-full bg-cover bg-center bg-secondary-500" >
+			<div class="w-3/4 lg:w-1/2 mx-auto p-4 bg-white text-xl sticky rounded-3xl drop-shadow-md font-paragraf text-center top-1/4">
+				<Text teksttype="brødtekst" font="sans" color="black">
+					Men du kan være med til at ændre på afghanske pigers skæbne! 
+				</Text></div>
+	</div>
 
-		  <!-- SECTION 8 -->
-		  <article>
+	<!-- SECTION 12 ADF - HVEM ER VI? -->
+	<article id="section12">
 			<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/JPq9jcC.jpeg')" ><!-- sticky elementet med lidt ekstra indhold -->
 				<div class="flex justify-start h-full">
 					<div class="flex flex-col w-full md:w-1/2 md:justify-end md:text-white md:p-8 xs:justify-start xs:text-primary-600 gap-4 p-4 pt-8 ">
@@ -446,61 +436,60 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-8
 				 p-4">
 				 <div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="black">
 						Afghan Daanish Foundation er en danskbaseret velgørenhedsorganisation, der arbejder for at give børn og unge i Afghanistan adgang til uddannelse – uanset køn, baggrund eller tro
 						</Text>
 				</div>
 				<div class="bg-slate-100 text-center p-1 rounded-3xl drop-shadow-md">
-					<Text teksttype="brødtekst">
+					<Text teksttype="brødtekst" font="sans" color="black">
 						Organisationen blev grundlagt i 2019 af Najiba Akbari; en afghansk kvinde bosat i Danmark med ønsket om at genopbygge landet gennem viden og uddannelse.
 						</Text>
 				</div>
 				</div>
 			</div>
 			<div class="h-[100vh]"></div>
-		</article>
+	</article>
 		
-		  <!-- SECTION 9 -->
-		<section class="">
+	<!-- SECTION 13 ADF - VISION -->
+	<section id="section13">
 		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('https://i.imgur.com/fAwgeuA.jpeg')" >
 			<div class="w-3/4 lg:w-2/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1 rounded-3xl drop-shadow-md">
 				<Heading htmlheading="h2" size="medium" font="serif" color="black">Vores vision</Heading>
-				<Text teksttype="brødtekst" color="black">
+				<Text teksttype="brødtekst" font="sans" color="black">
 					 Et Afghanistan, hvor alle børn har adgang til uddannelse og mulighed for at forme deres fremtid.
 					</Text></div>
 		</div>
 	</section>
 
-	  <!-- SECTION 10 -->
-	  <section class="">
+	<!-- SECTION 14 ADF - MISSION -->
+	<section id="section14">
 		<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('https://i.imgur.com/yawKGBD.jpeg')" >
 			<div class="w-3/4 lg:w-2/4 lg:ml-64 p-10 bg-slate-50 text-xl stickyparallax1 rounded-3xl drop-shadow-md">
 				<Heading htmlheading="h2" size="medium" font="serif" color="black">Vores mission</Heading>
-				<Text teksttype="brødtekst" color="black">
+				<Text teksttype="brødtekst" font="sans" color="black">
 					 At støtte uddannelsesprojekter, skabe lokale samarbejder og give piger og kvinder mulighed for at lære – selv under vanskelige forhold
 					</Text></div>
 		</div>
 	</section>
 
-
-		<!-- SECTION 11 -->
-		<article class="overflow-hidden md:h-[100vh]">
+	<!-- SECTION 15 - ADF - DATAVIZ:NÆGTET SKOLEGANG -->
+	<article id="section15" class="overflow-hidden md:h-[100vh]">
 			<div class=" bg-white md:grid grid-cols-2" >
 				<div>
 					<div class="flourish-embed flourish-number-ticker justify-center md:pt-25 xs:p-8" data-src="visualisation/26183455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26183455/thumbnail" width="100%" alt="number-ticker visualization" /></noscript></div>
 			</div>
 					<div>
-						<img src="https://i.imgur.com/nX1AEvN.png" alt="half portrait">
+						<img src="https://i.imgur.com/nX1AEvN.png" alt="portait af pige">
 					</div>
 			</div>
-		</article>
+	</article>
 
-  <!-- SECTION 12 -->
-  <article>
+    <!-- SECTION 16 - ADF - HVORFOR ER UDDANNELSE VIGTIGT? -->
+    <article id="section16">
 	<div class="bg-primary-500 overflow-hidden md:h-[100vh]" >
 		<section class="md:grid grid-cols-2">
 			<div class="">
-				<img src="https://i.imgur.com/ZXXkAjs.jpeg" alt="half portrait">
+				<img src="https://i.imgur.com/ZXXkAjs.jpeg" alt="Najiba Akbari portræt">
 			</div>
 			<div>
 				<div class="p-6">
@@ -521,10 +510,10 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 		</section>
 	</div>
-</article>
+    </article>
 
- <!-- SECTION 13 -->
-<section class="md:grid grid-cols-4 my-20 mx-2">
+    <!-- SECTION 17 - ADF - DATAVIZ:RESULTATER -->
+    <section id="section17" class="md:grid grid-cols-4 my-20 mx-2">
 	<article>
 	<div class="flourish-embed flourish-number-ticker" data-src="visualisation/26422139"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26422139/thumbnail" width="100%" alt="number-ticker visualization" /></noscript></div>
 	<div class="text-center">
@@ -549,10 +538,10 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			<Heading htmlheading="h2" size="medium" font="serif" color="black">lærere ansat</Heading>
 		</div>
 </article>
-</section>
+    </section>
 
- <!-- SECTION 14 -->
-	<article>
+    <!-- SECTION 18 - ADF - VI GØR EN FORSKEL -->
+	<article id="section18">
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/QRsRXb7.png')" ><!-- sticky elementet med lidt ekstra indhold -->
 			<div class="flex justify-start h-full">
 				<div class="flex flex-col w-full md:w-1/2 justify-start gap-4 p-8 ">
@@ -572,9 +561,9 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		<div class="h-[100vh]"></div>
 	</article>
 
- <!-- SECTION 14 -->
- <article class="bg-white p-8">
-	<Heading htmlheading="h2" size="large" font="serif" color="black">Vi gør en forskel</Heading>
+ 	<!-- SECTION 19 - ADF - VORES MÅL -->
+  	<article id="section19" class="bg-white p-8">
+	<Heading htmlheading="h2" size="large" font="serif" color="black">Vores mål</Heading>
 	<section class="md:grid grid-cols-3 md:my-10 md:mx-8 md:pt-8">
 	<div class="text-center justify-items-center mx-8">
 		<img src="https://i.imgur.com/rdWBJwO.png" alt="infographic 1">
@@ -592,9 +581,9 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 </section>
 	</article>
 
-	<!-- SECTION 15 -->
-	  <article>
-		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" ><!-- sticky elementet med lidt ekstra indhold -->
+	<!-- SECTION 20 - SÅDAN STØTTER DU - VIL DU VÆRE MED? -->
+	<article id="section20">
+		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" >
 			<div class="flex justify-start h-full">
 				<div class="flex flex-col w-full md:w-1/2  justify-center gap-4 p-4 ">
 					<div class="">
@@ -614,17 +603,17 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		<div class="relative flex justify-end">
 			<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-4 p-4 ">
 				<div class="">
-					<p class="sticky top-1/4 w-3/4 p-10 bg-white rounded-3xl drop-shadow-xl text-xl font-paragraf text-center">
-						Vil du være med til at virkeliggøre vores mål?
-					  </p>
+					<div class="sticky top-1/4 w-3/4  text-center">
+						<Heading htmlheading="h1" size="large" font="serif" color="red">Vil du være med til at gøre en forskel?</Heading>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="h-[100vh]"></div>
 	</article>
 
- <!-- SECTION 16 -->
- <article>
+ 	<!-- SECTION 21 - SÅDAN STØTTER DU - DONATIONSFORMULAR -->
+  	<article id="section21">
 	<div class=" top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/fAwgeuA.jpeg')" >
 		<section class="md:grid grid-cols-2">
 			<div>
@@ -632,10 +621,10 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 		</section>
 	</div>
-</article>
+	</article>
 
- <!-- SECTION 16 -->
- <article>
+ 	<!-- SECTION 22 - SÅDAN STØTTER DU - ANDRE MÅDER AT STØTTE PÅ -->
+ 	<article id="section22">
 	<div class=" top-0 left-0 right-0 bottom-0 w-full bg-white p-8 text-center" >
 		<Heading htmlheading="h1" size="medium" font="serif" color="black">Andre måder du kan støtte på</Heading>
 		<section class="md:grid grid-cols-3 md:mx-8">
@@ -643,7 +632,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				<div>
 					<Card
 					cardimage="https://i.imgur.com/dswvjKW.jpeg"
-					cardimagealt=""
+					cardimagealt="shop"
 					cardbuttontekst="Køb i vores shop"
 					></Card>
 				</div>
@@ -652,7 +641,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				<div>
 					<Card
 					cardimage="https://i.imgur.com/02fLJF9.png"
-					cardimagealt=""
+					cardimagealt="foredrag"
 					cardbuttontekst="Book et foredrag"
 					></Card>
 				</div>
@@ -661,23 +650,16 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				<div>
 					<Card
 					cardimage="https://i.imgur.com/O7LBzTb.jpeg"
-					cardimagealt=""
+					cardimagealt="del budskabet"
 					cardbuttontekst="Del budskabet"
 					></Card>
 				</div>
 			</div>
 		</section>
 	</div>
-</article>
-
-
-
-  
+	</article>
 
 	</main>
-	
-	  
-
 </body>
 
 </MainLayout>
@@ -690,7 +672,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		target: document.querySelector(".stickyparallax1"),
 	});
 
-		/* Horisontal scroll sektion */
+	/* Horisontal scroll sektion */
 		scroll(
 	animate("#horisontalliste", {
 		transform: ["none", "translateX(-1000vw)"]
