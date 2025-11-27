@@ -7,8 +7,8 @@ import Heading from "../components/Heading.astro";
 ---
 
 <!-- STEP 1 BETALINGSFORM -->
-<section id="step1" class="flex flex-col items-center justify-center gap-4 p-4">
-  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+<section id="step1" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
+  <div class="flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="25" max="100"></progress>
 
@@ -34,7 +34,7 @@ import Heading from "../components/Heading.astro";
     </div>
 
     <div class="flex justify-end w-full mt-4">
-      <button type="button" value="testknap" onclick="goStep1Forward()">knap frem</button>
+      <button id="buttonforward" type="button" value="testknap" onclick="goStep1Forward()">knap frem</button>
     </div>
 
     <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
@@ -42,9 +42,9 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 2 BETALINGSFORM / PRIVATBETALING-->
-<section id="step2" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
-  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
-    <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+<section id="step2" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
+  <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
+    <div class="text-black z-[1] opacity-90 rounded-xl inset-0.5 gap-8 text-center">
       <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
 
       <Text teksttype="brødtekst" font="sans" color="white">
@@ -53,14 +53,16 @@ import Heading from "../components/Heading.astro";
 
       <Textinput label="Fornavn" placeholder="Fornavn" />
       <Textinput label="Efternavn" placeholder="Efternavn" />
+      <section class="lex justify-between w-full mt-4">
       <Textinput label="Email" placeholder="Email" />
       <Textinput label="Telefon" placeholder="Telefon" />
+    </section>
 
       <input id="businessCheckbox" type="checkbox" checked="checked" class="checkbox" onclick="goStep2Forward()"/>
 
       <div class="flex justify-between w-full mt-4">
-        <button type="button" value="testknap" onclick="goStep2Back()">knap tilbage</button>
-        <button type="button" value="testknap" onclick="goStep2Forward()">knap frem</button>
+        <button id="buttonback" type="button" value="testknap" onclick="goStep2Back()">knap tilbage</button>
+        <button id="buttonforward" type="button" value="testknap" onclick="goStep2Forward()">knap frem</button>
       </div>
     </div>
 
@@ -70,13 +72,22 @@ import Heading from "../components/Heading.astro";
 
 <!-- STEP 2 BETALINGSFORM / VIRKSOMHED -->
 <section id="step2Business" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
-  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+  <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
 
       <Text teksttype="brødtekst" font="sans" color="white">
         Tak fordi du vil støtte afghanske piger som virksomhed!
       </Text>
+
+
+      <Textinput label="Fornavn" placeholder="Fornavn" />
+      <Textinput label="Efternavn" placeholder="Efternavn" />
+      <Textinput label="Email" placeholder="Email" />
+      <Textinput label="Telefon" placeholder="Telefon" />
+
+      <input id="businessCheckbox" type="checkbox" checked="checked" class="checkbox" onclick="goStep2Forward()"/>
+
 
       <Textinput label="Firmanavn" placeholder="Firmanavn" />
       <Textinput label="CVR-nummer" placeholder="CVR" />
@@ -88,8 +99,8 @@ import Heading from "../components/Heading.astro";
       <Textinput label="By" placeholder="By" />
 
       <div class="flex justify-between w-full mt-4">
-        <button type="button" value="testknap" onclick="goStep2BusinessBack()">knap tilbage</button>
-        <button type="button" value="testknap" onclick="goStep2BusinessForward()">knap frem</button>
+        <button id="buttonback" type="button" value="testknap" onclick="goStep2BusinessBack()">knap tilbage</button>
+        <button id="buttonforward" type="button" value="testknap" onclick="goStep2BusinessForward()">knap frem</button>
       </div>
     </div>
 
@@ -99,7 +110,7 @@ import Heading from "../components/Heading.astro";
 
 <!-- STEP 3 BETALINGSFORM -->
 <section id="step3" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
-  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+  <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="75" max="100"></progress>
 
@@ -115,8 +126,8 @@ import Heading from "../components/Heading.astro";
       <Textinput label="Navn på kort" placeholder="Som på kortet" />
 
       <div class="flex justify-between w-full mt-4">
-        <button type="button" value="testknap" onclick="goStep3Back()">knap tilbage</button>
-        <button type="button" value="testknap" onclick="goStep3Forward()">knap frem</button>
+        <button id="buttonback" type="button" value="testknap" onclick="goStep3Back()">knap tilbage</button>
+        <button id="buttonforward" type="button" value="testknap" onclick="goStep3Forward()">knap frem</button>
       </div>
     </div>
 
@@ -126,7 +137,7 @@ import Heading from "../components/Heading.astro";
 
 <!-- STEP 4 BETALINGSFORM -->
 <section id="step4" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
-  <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+  <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="100" max="100"></progress>
       <Heading htmlheading="h2" size="medium" font="serif">Tak for din støtte!</Heading>
@@ -136,7 +147,7 @@ import Heading from "../components/Heading.astro";
       </Text>
 
       <div class="flex justify-start w-full mt-4">
-        <button type="button" value="testknap" onclick="goStep4Back()">knap tilbage</button>
+        <button id="buttonback" type="button" value="testknap" onclick="goStep4Back()">knap tilbage</button>
       </div>
     </div>
 
@@ -149,6 +160,26 @@ import Heading from "../components/Heading.astro";
   background-color: #B9534B; /* DIN FARVE */
   border-radius: 100px;
 }
+
+#buttonforward {
+  background-color: #B9534B;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#buttonback {
+  background-color: #CCCCCC;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 </style>
 
 <script is:inline>
