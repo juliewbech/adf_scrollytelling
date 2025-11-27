@@ -2,9 +2,7 @@
 import Button from "../components/Button.astro";
 import Text from "../components/Text.astro";
 import Textinput from "../components/Textinput.astro";
-import Arrowbutton from "../components/Arrowbutton.astro";
 import SwitchToggle from "../components/SwitchToggle.astro";
-import Checkbox from "../components/Checkbox.astro";
 import Heading from "../components/Heading.astro";
 ---
 
@@ -36,8 +34,7 @@ import Heading from "../components/Heading.astro";
     </div>
 
     <div class="flex justify-end w-full mt-4">
-      <input type="button" value="testknap" onclick="goStep1Forward()">
-      <Arrowbutton direction="forward" variant="primary" size="medium"  />
+      <button type="button" value="testknap" onclick="goStep1Forward()">knap frem</button>
     </div>
 
     <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
@@ -59,11 +56,11 @@ import Heading from "../components/Heading.astro";
       <Textinput label="Email" placeholder="Email" />
       <Textinput label="Telefon" placeholder="Telefon" />
 
-      <Checkbox id="businessCheckbox" label="Jeg betaler på vegne af en virksomhed" />
+      <input id="businessCheckbox" type="checkbox" checked="checked" class="checkbox" onclick="goStep2Forward()"/>
 
       <div class="flex justify-between w-full mt-4">
-        <Arrowbutton direction="back" variant="primary" size="medium" onclick="goStep2Back()" />
-        <Arrowbutton direction="forward" variant="primary" size="medium" onclick="goStep2Forward()" />
+        <button type="button" value="testknap" onclick="goStep2Back()">knap tilbage</button>
+        <button type="button" value="testknap" onclick="goStep2Forward()">knap frem</button>
       </div>
     </div>
 
@@ -91,8 +88,8 @@ import Heading from "../components/Heading.astro";
       <Textinput label="By" placeholder="By" />
 
       <div class="flex justify-between w-full mt-4">
-        <Arrowbutton direction="back" variant="primary" size="medium" onclick="goStep2BusinessBack()" />
-        <Arrowbutton direction="forward" variant="primary" size="medium" onclick="goStep2BusinessForward()" />
+        <button type="button" value="testknap" onclick="goStep2BusinessBack()">knap tilbage</button>
+        <button type="button" value="testknap" onclick="goStep2BusinessForward()">knap frem</button>
       </div>
     </div>
 
@@ -118,8 +115,8 @@ import Heading from "../components/Heading.astro";
       <Textinput label="Navn på kort" placeholder="Som på kortet" />
 
       <div class="flex justify-between w-full mt-4">
-        <Arrowbutton direction="back" variant="primary" size="medium" onclick="goStep3Back()" />
-        <Arrowbutton direction="forward" variant="primary" size="medium" onclick="goStep3Forward()" />
+        <button type="button" value="testknap" onclick="goStep3Back()">knap tilbage</button>
+        <button type="button" value="testknap" onclick="goStep3Forward()">knap frem</button>
       </div>
     </div>
 
@@ -139,7 +136,7 @@ import Heading from "../components/Heading.astro";
       </Text>
 
       <div class="flex justify-start w-full mt-4">
-        <Arrowbutton direction="back" variant="primary" size="medium" onclick="goStep4Back()" />
+        <button type="button" value="testknap" onclick="goStep4Back()">knap tilbage</button>
       </div>
     </div>
 
