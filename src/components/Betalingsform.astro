@@ -36,7 +36,8 @@ import Heading from "../components/Heading.astro";
     </div>
 
     <div class="flex justify-end w-full mt-4">
-      <Arrowbutton direction="forward" variant="primary" size="medium" onclick="goStep1Forward()" />
+      <input type="button" value="testknap" onclick="goStep1Forward()">
+      <Arrowbutton direction="forward" variant="primary" size="medium"  />
     </div>
 
     <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
@@ -153,7 +154,7 @@ import Heading from "../components/Heading.astro";
 }
 </style>
 
-<script>
+<script is:inline>
   let selectedAmount = null;
   
   function selectAmount(amount) {
@@ -163,6 +164,7 @@ import Heading from "../components/Heading.astro";
   
   // Step 1 → Step 2 privat
   function goStep1Forward() {
+    console.log("test");
     document.getElementById('step1').style.display = 'none';
     document.getElementById('step2').style.display = 'flex';
   }
