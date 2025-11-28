@@ -185,6 +185,11 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</div>
 	</section>
 
+	<section class="crossfadeimages mx-auto relative overflow-hidden h-screen w-full">
+		<img src="https://i.imgur.com/tAa7Alq.png" alt="" class="crossfadetopimg object-cover h-screen absolute top-0 z-0 my-0">
+		<img src="https://i.imgur.com/8NESiHh.png" alt="" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0">
+	</section>
+
 	<!-- SECTION - 4 MINAS HISTORIE PART 3-->
 	<article id="section4">
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/dnM7IoN.png')" >
@@ -759,6 +764,16 @@ inView("#stagger", () => {
   );
 });
 
+/* Crossfade to billeder */
+scroll(
+	animate(".crossfadebottomimg", {
+		opacity: [1, 0]
+	}), {
+		target: document.querySelector(".crossfadeimages"),
+		offset: ["-25vh", "25vh"]
+	}
+	);
+	
 
 	/*Progress-baren/læseindikatoren */
 	scroll( animate(".progress-bar", { scaleX: [0, 1] }));
