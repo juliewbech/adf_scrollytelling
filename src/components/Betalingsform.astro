@@ -8,7 +8,7 @@ import Heading from "../components/Heading.astro";
 
 <section class="pt-8">
 <!-- STEP 1 BETALINGSFORM -->
-<section id="step1" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
+<section id="step1" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
   <div class="flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="25" max="100"></progress>
@@ -34,7 +34,7 @@ import Heading from "../components/Heading.astro";
     </div>
     </div>
 
-    <div class="flex justify-end w-full mt-4">
+    <div class="flex justify-end w-full mt-8">
       <button id="buttonforward" type="button" value="testknap" onclick="goStep1Forward()">knap frem</button>
     </div>
 
@@ -43,7 +43,7 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 2 BETALINGSFORM / PRIVATBETALING-->
-<section id="step2" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
+<section id="step2" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
   <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
     <div class="text-black z-[1] opacity-90 rounded-xl inset-0.5 gap-8 text-center">
       <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
@@ -62,9 +62,12 @@ import Heading from "../components/Heading.astro";
         <input class="w-full" placeholder="Tlf. nr.">
     </section>
 
+    <div class="pt-2 text-start">
       <input id="businessCheckbox" type="checkbox" class="checkbox" onclick="goStep2Forward()"/>
+      <label for="businessCheckbox" class=" text-white font-paragraf text-sm">Jeg betaler på vegne af en virksomhed</label>
+    </div>
 
-      <div class="flex justify-between w-full mt-4">
+      <div class="flex justify-between w-full mt-8">
         <button id="buttonback" type="button" value="testknap" onclick="goStep2Back()">knap tilbage</button>
         <button id="buttonforward" type="button" value="testknap" onclick="goStep2Forward()">knap frem</button>
       </div>
@@ -74,35 +77,48 @@ import Heading from "../components/Heading.astro";
   </div>
 </section>
 
-<!-- STEP 2 BETALINGSFORM / VIRKSOMHED -->
-<section id="step2Business" class="flex flex-col items-center justify-center gap-4 p-4">
-  <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
-    <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
+<!-- STEP 2 BETALINGSFORM / BUISNESS -->
+<section id="step2Business" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
+  <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
+    <div class="text-black z-[1] opacity-90 rounded-xl inset-0.5 gap-8 text-center">
       <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
 
-      <Text teksttype="brødtekst" font="sans" color="white">
-        Tak fordi du vil støtte afghanske piger som virksomhed!
+      <Text teksttype="brødtekst" font="serif" color="white">
+        Tak fordi du vil støtte afghanske piger!
       </Text>
+      <div class="pb-4">
+        <p class="text-start font-paragraf text-white pb-1 text-lg">Navn</p>
+      <input class="w-full" placeholder="Fornavn">
+      </div>
+      <input class="w-full" placeholder="Efternavn">
+      <p class="text-start font-paragraf text-white pt-3 pb-1 text-lg">Kontaktoplysninger</p>
+      <section class="flex justify-between w-full">
+        <input class="w-full" placeholder="E-mail">
+        <input class="w-full" placeholder="Tlf. nr.">
+    </section>
 
+    <div class="my-4 text-start ">
+      <input id="businessCheckbox" type="checkbox" class="checkbox" checked="checked" onclick="goStep2BusinessForward()"/>
+      <label for="businessCheckbox" class=" text-white font-paragraf text-sm">Jeg betaler på vegne af en virksomhed</label>
+    </div>
 
-      <Textinput label="Fornavn" placeholder="Fornavn" />
-      <Textinput label="Efternavn" placeholder="Efternavn" />
-      <Textinput label="Email" placeholder="Email" />
-      <Textinput label="Telefon" placeholder="Telefon" />
+    <section class="flex justify-between w-full">
+      <input class="w-full" placeholder="Virksomhedsnavn">
+      <input class="w-full" placeholder="CVR-nummer">
+  </section>
+    <input class="w-full my-4" placeholder="Land">
+    <input class="w-full mb-4" placeholder="Adresse">
+    <section class="flex justify-between w-full mb-4">
+      <input class="w-full" placeholder="By">
+      <input class="w-full" placeholder="Postnummer">
+  </section>
 
-      <input id="businessCheckbox" type="checkbox" checked="checked" class="checkbox" onclick="goStep2Forward()"/>
+  <div class="my-4 text-sm text-center">
+    <input id="businessCheckbox" type="checkbox" class="checkbox" />
+    <label for="businessCheckbox" class=" text-white font-paragraf">Jeg har læst og accepteret abonnementsbetingelserne</label>
+  </div>
 
-
-      <Textinput label="Firmanavn" placeholder="Firmanavn" />
-      <Textinput label="CVR-nummer" placeholder="CVR" />
-      <Textinput label="Kontaktperson" placeholder="Kontaktperson" />
-      <Textinput label="Email" placeholder="Email" />
-      <Textinput label="Telefon" placeholder="Telefon" />
-      <Textinput label="Adresse" placeholder="Adresse" />
-      <Textinput label="Postnummer" placeholder="Postnummer" />
-      <Textinput label="By" placeholder="By" />
-
-      <div class="flex justify-between w-full mt-4">
+      <div class="flex justify-between w-full mt-8">
         <button id="buttonback" type="button" value="testknap" onclick="goStep2BusinessBack()">knap tilbage</button>
         <button id="buttonforward" type="button" value="testknap" onclick="goStep2BusinessForward()">knap frem</button>
       </div>
@@ -113,23 +129,41 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 3 BETALINGSFORM -->
-<section id="step3" class="flex flex-col items-center justify-center gap-4 p-4">
-  <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
-    <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
-      <progress class="progress w-full rounded-full my-progress" value="75" max="100"></progress>
+<section id="step3" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
+  <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
+    <div class="text-black z-[1] opacity-90 rounded-xl inset-0.5 gap-8 text-center">
+      <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
 
-      <Text teksttype="brødtekst" font="sans" color="white">
-        Indtast dine betalingsoplysninger
+      <Text teksttype="brødtekst" font="serif" color="white">
+        Tak fordi du vil støtte afghanske piger!
       </Text>
+      <div class="my-4 text-start ">
+        <input id="businessCheckbox" type="checkbox" class="checkbox" checked="checked"/>
+        <label for="businessCheckbox" class=" text-white font-paragraf text-sm">Betalingskort</label>
+      </div>
 
-      <Textinput label="Kortnummer" placeholder="1234 5678 9012 3456" />
-      <section class="grid grid-cols-2 gap-2 justify-items-center">
-        <Textinput label="Udløbsdato" placeholder="MM/ÅÅ" />
-        <Textinput label="CVC" placeholder="CVC" />
-      </section>
-      <Textinput label="Navn på kort" placeholder="Som på kortet" />
+      <div class="pb-1">
+        <p class="text-start font-paragraf text-white pb-1 text-lg">Kortnummer</p>
+      <input class="w-full" placeholder="1234 1234 1234 1234">
+      </div>
+      <section class="flex justify-between w-full">
+        <div>
+        <p class="text-start font-paragraf text-white pt-3 pb-1 text-lg">Udløbsdato</p>
+        <input class="w-full" placeholder="MM/ÅÅ">
+      </div>
+      <div>
+        <p class="text-start font-paragraf text-white pt-3 pb-1 text-lg">CVV</p>
+        <input class="w-full" placeholder="3-cifret kode">
+      </div>
+    </section>
 
-      <div class="flex justify-between w-full mt-4">
+
+  <div class="my-4 text-start">
+    <input id="businessCheckbox" type="checkbox" class="checkbox" />
+    <label for="businessCheckbox" class=" text-white font-paragraf">Mobilepay</label>
+  </div>
+
+      <div class="flex justify-between w-full mt-8">
         <button id="buttonback" type="button" value="testknap" onclick="goStep3Back()">knap tilbage</button>
         <button id="buttonforward" type="button" value="testknap" onclick="goStep3Forward()">knap frem</button>
       </div>
@@ -140,17 +174,35 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 4 BETALINGSFORM -->
-<section id="step4" class="flex flex-col items-center justify-center gap-4 p-4">
+<section id="step4" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
   <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="100" max="100"></progress>
       <Heading htmlheading="h2" size="medium" font="serif">Tak for din støtte!</Heading>
 
+<div class="pt-4">
+  <svg
+  class="w-15 h-15"
+  stroke="white"
+  stroke-width="2"
+  viewBox="0 0 24 24"
+  fill="#b9534b"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M4.8 8.1c0-2.3 1.9-4.1 4.1-4.1 1.6 0 3 .9 3.8 2.2 0.8-1.3 2.2-2.2 3.8-2.2 2.3 0 4.1 1.9 4.1 4.1 0 5.3-7.9 10.2-7.9 10.2S4.8 13.4 4.8 8.1z"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
+</div>
+
       <Text teksttype="brødtekst" font="sans" color="white">
         På grund af dig kan afghanske pigers drømme gå i opfyldelse
       </Text>
 
-      <div class="flex justify-start w-full mt-4">
+      <div class="flex justify-start w-full mt-8">
         <button id="buttonback" type="button" value="testknap" onclick="goStep4Back()">knap tilbage</button>
       </div>
     </div>
