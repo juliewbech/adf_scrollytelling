@@ -2,7 +2,7 @@
 import Heading from "../components/Heading.astro";
 import Button from "../components/Button.astro";
 
-const { url="#", cardimage="", cardimagealt="", cardtitel="", cardbuttontekst=""
+const { url="", cardimage="", cardimagealt="", cardtitel="", cardbuttontekst=""
  } = Astro.props;
 ---
 
@@ -19,13 +19,30 @@ const { url="#", cardimage="", cardimagealt="", cardtitel="", cardbuttontekst=""
       </div>
   
       <!-- Button -->
-      <div class="absolute inset-0 flex items-end p-4 justify-center z-20">
-        <Button href={url} variant="primary" size="medium">
+      <div class="absolute inset-0 flex items-end p-4 justify-center z-20 font-header text-center ">
+        <a class="transition delay-150 duration-200 ease-in-out hover:-translate-y-1" href={url} target="_blank">
           {cardbuttontekst}
-        </Button>
+        </a>
       </div>
   
     </div>
   </div>
   
-  
+  <style>
+    a {
+      background-color: #b9534b;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    :hover a {
+      background-color: #d96f67;
+    }
+
+    :focus a {
+      background-color: #96423b;
+    }
+  </style>
