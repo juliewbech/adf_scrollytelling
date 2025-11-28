@@ -42,18 +42,25 @@ import Betalingsform from "../components/Betalingsform.astro";
 			
 		  
 			  {/* Content */}
-			  <div class="hero-content text-neutral-content top-115 z-20 p-8 relative">
+			  <div class="hero-content text-neutral-content top-105 z-20 p-8 relative">
+				<div class="md:mb-4">
+					<Heading htmlheading="h1" size="large" font="serif" color="white">Afghanske piger</Heading>
+				</div>
+				<div class="md:mb-8">
+					<Heading htmlheading="h1" size="large" font="serif" color="white">fratages ret til uddannelse</Heading>
+				</div>
 				<div>
-					<Heading htmlheading="h1" size="large" font="serif" color="white">Afghanske pigers</Heading>
-					<Heading htmlheading="h1" size="large" font="serif" color="white">forbud om uddannelse</Heading>
-					<Heading htmlheading="h2" size="small" font="serif" color="white">af Afghan Daanish Foundation</Heading>
+					<a href="#section22"><Button variant="primary"size="medium">Støt nu</Button></a>
 				</div>
 			</div>
 			<div class="absolute bottom-10 z-20 w-full flex justify-center">
 	
-<a href="#section2"><button
-class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-6 tracking-wider shadow-xl animate-bounce hover:animate-none"
+<a href="#section2" class="animate-bounce hover:animate-none justify-center flex flex-col items-center gap-4">
+	<Text teksttype="konsultativ" font="sans" color="white"> Dyk ned i Minas historie </Text>
+	<button
+class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-6 tracking-wider shadow-xl"
 >
+
 <svg
   class="w-5 h-5"
   stroke="white"
@@ -74,8 +81,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 	</section>
 
-	<!-- SECTION 2 - START MINAS HISTORIE-->
-	<section id="section2">
+	<!-- SECTION 1 - START MINAS HISTORIE-->
+	<section id="section1">
 		<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
 			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4">
 				<Heading htmlheading="h3" size="medium" font="sans" color="white">MINAS HISTORIE</Heading>
@@ -108,8 +115,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</div>
 	</section>
 
-	<!-- SECTION 1 - KORT OVER MELLEMØSTEN -->
-	<article id="section1">
+	<!-- SECTION 2 - KORT OVER MELLEMØSTEN -->
+	<article id="section2">
 		  <section class="scrollzoom overflow-clip">
 				<img src="https://i.imgur.com/1wxy7cZ.png" class="scrollzoomimg w-full" alt="kort over mellemøsten">
 			</section> 
@@ -328,7 +335,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</article>
 
 	<!-- SECTION 9 - AFGHANISTANS HISTORIE - HVORDAN GIK DET TIL? -->
-		<section id="section9">
+	<section id="section9">
 			<div class="flex items-center h-screen w-full bg-cover bg-center bg-black" >
 				<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4">
 					<Heading htmlheading="h3" size="medium" font="sans" color="white">AFGHANISTANS HISTORIE</Heading>
@@ -336,7 +343,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 					<Heading htmlheading="h1" size="large" font="serif" color="white">Hvordan gik det sådan til i Afghanistan?</Heading>
 				</div>
 			</div>
-		</section>
+	</section>
 
 	<!-- SECTION 10 - TIDSLINJE OVER AFGHANISTAN DE SIDSTE 30 ÅR-->
 	<section id="section10">
@@ -455,11 +462,15 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</section>
 
 	<!-- SECTION 12 - MEN DU KAN VÆRE MED -->
-	<div id="section12" class="flex items-center h-screen w-full bg-cover bg-center bg-secondary-500" >
-				<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4">
-					<Heading htmlheading="h1" size="large" font="serif" color="white">Men sammen kan vi ændre på afghanske pigers skæbne</Heading>
-				</div>
-	</div>
+	<section id="section12">
+		<div class="flex items-center h-screen w-full bg-cover bg-center bg-secondary-500" >
+			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4">
+				<Heading htmlheading="h3" size="medium" font="sans" color="white">ADF & VORES ARBEJDE</Heading>
+				<hr class="my-8">
+				<Heading htmlheading="h1" size="large" font="serif" color="white">Sammen kan vi ændre på afghanske pigers skæbne</Heading>
+			</div>
+		</div>
+	</section>
 
 	<!-- SECTION 13 ADF - HVEM ER VI? -->
 	<article id="section13">
@@ -622,39 +633,38 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 </section>
 	</article>
 
-	<!-- SECTION 20 - SÅDAN STØTTER DU - VIL DU VÆRE MED? -->
-	<article id="section20">
-		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center bg-white" >
-			<div class="flex justify-start h-full">
-				<div class="flex flex-col w-full md:w-1/2  justify-center gap-4 p-4 ">
-					<div class="">
-						<video
-		  autoPlay
-		  muted
-		  loop
-		  playsInline
-		  class=" z-0"
-		>
-		  <source src="https://i.imgur.com/D4vldug.mp4" type="video/mp4" />
-		</video>
-					</div>
+	<!-- SECTION 20 - VIDEO AF LEGENDE PIGE -->
+	<section id="section20">
+		<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
+			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4">
+				<div class="p-8">
+					<video
+	  autoPlay
+	  muted
+	  loop
+	  playsInline
+	  class=" z-0"
+	>
+	  <source src="https://i.imgur.com/D4vldug.mp4" type="video/mp4" />
+	</video>
 				</div>
 			</div>
 		</div>
-		<div class="relative flex justify-end">
-			<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-4 p-4 ">
-				<div class="">
-					<div class="sticky top-1/4 w-3/4  text-center">
-						<Heading htmlheading="h1" size="large" font="serif" color="red">Vil du være med til at gøre en forskel?</Heading>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="h-[100vh]"></div>
-	</article>
+</section>
 
- 	<!-- SECTION 21 - SÅDAN STØTTER DU - DONATIONSFORMULAR -->
-  	<article id="section21">
+	<!-- SECTION 21 - SÅDAN STØTTER DU - VIL DU VÆRE MED? -->
+	<section id="section21">
+		<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
+			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4">
+				<Heading htmlheading="h3" size="medium" font="sans" color="white">SÅDAN STØTTER DU</Heading>
+				<hr class="my-8 text-red-500">
+				<Heading htmlheading="h1" size="large" font="serif" color="white">Vil du være med til at gøre en forskel?</Heading>
+			</div>
+		</div>
+</section>
+
+ 	<!-- SECTION 22 - SÅDAN STØTTER DU - DONATIONSFORMULAR -->
+  	<article id="section22">
 	<div class=" top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/fAwgeuA.jpeg')" >
 		<section class="flex justify-center">
 			<div>
@@ -664,8 +674,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</div>
 	</article>
 
- 	<!-- SECTION 22 - SÅDAN STØTTER DU - ANDRE MÅDER AT STØTTE PÅ -->
- 	<article id="section22">
+ 	<!-- SECTION 23 - SÅDAN STØTTER DU - ANDRE MÅDER AT STØTTE PÅ -->
+ 	<article id="section23">
 	<div class=" top-0 left-0 right-0 bottom-0 w-full bg-white p-8 text-center" >
 		<Heading htmlheading="h1" size="medium" font="serif" color="black">Andre måder du kan støtte på</Heading>
 		<section class="md:grid grid-cols-3 md:mx-8">
