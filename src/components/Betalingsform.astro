@@ -8,7 +8,7 @@ import Heading from "../components/Heading.astro";
 
 <section class="pt-8">
 <!-- STEP 1 BETALINGSFORM -->
-<section id="step1" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
+<section id="step1" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
   <div class="flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="25" max="100"></progress>
@@ -30,7 +30,7 @@ import Heading from "../components/Heading.astro";
       </section>
 
       <div class="pt-4 w-sm">
-      <Textinput label="Andet beløb" placeholder="Indtast beløb her" />
+      <input class="w-full" placeholder="Andet beløb">
     </div>
     </div>
 
@@ -43,23 +43,26 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 2 BETALINGSFORM / PRIVATBETALING-->
-<section id="step2" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
+<section id="step2" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl">
   <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
     <div class="text-black z-[1] opacity-90 rounded-xl inset-0.5 gap-8 text-center">
       <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
 
-      <Text teksttype="brødtekst" font="sans" color="white">
+      <Text teksttype="brødtekst" font="serif" color="white">
         Tak fordi du vil støtte afghanske piger!
       </Text>
-
-      <Textinput label="Fornavn" placeholder="Fornavn" />
-      <Textinput label="Efternavn" placeholder="Efternavn" />
-      <section class="lex justify-between w-full mt-4">
-      <Textinput label="Email" placeholder="Email" />
-      <Textinput label="Telefon" placeholder="Telefon" />
+      <div class="pb-4">
+        <p class="text-start font-paragraf text-white pb-1 text-lg">Navn</p>
+      <input class="w-full" placeholder="Fornavn">
+      </div>
+      <input class="w-full" placeholder="Efternavn">
+      <p class="text-start font-paragraf text-white pt-3 pb-1 text-lg">Kontaktoplysninger</p>
+      <section class="flex justify-between w-full">
+        <input class="w-full" placeholder="E-mail">
+        <input class="w-full" placeholder="Tlf. nr.">
     </section>
 
-      <input id="businessCheckbox" type="checkbox" checked="checked" class="checkbox" onclick="goStep2Forward()"/>
+      <input id="businessCheckbox" type="checkbox" class="checkbox" onclick="goStep2Forward()"/>
 
       <div class="flex justify-between w-full mt-4">
         <button id="buttonback" type="button" value="testknap" onclick="goStep2Back()">knap tilbage</button>
@@ -72,7 +75,7 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 2 BETALINGSFORM / VIRKSOMHED -->
-<section id="step2Business" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
+<section id="step2Business" class="flex flex-col items-center justify-center gap-4 p-4">
   <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
@@ -110,7 +113,7 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 3 BETALINGSFORM -->
-<section id="step3" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
+<section id="step3" class="flex flex-col items-center justify-center gap-4 p-4">
   <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="75" max="100"></progress>
@@ -137,7 +140,7 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 4 BETALINGSFORM -->
-<section id="step4" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4">
+<section id="step4" class="flex flex-col items-center justify-center gap-4 p-4">
   <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="100" max="100"></progress>
