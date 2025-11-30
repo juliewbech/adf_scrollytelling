@@ -185,48 +185,34 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</div>
 	</section>
 
-	<section class="crossfadeimages mx-auto relative overflow-hidden h-screen w-full">
-		<img src="https://i.imgur.com/tAa7Alq.png" alt="" class="crossfadetopimg object-cover h-screen absolute top-0 z-0 my-0">
-		<img src="https://i.imgur.com/8NESiHh.png" alt="" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0">
-	</section>
-
 	<!-- SECTION - 4 MINAS HISTORIE PART 3-->
-	<article id="section4">
-		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/dnM7IoN.png')" >
-			<div class="flex justify-end h-full">
-				<div class="flex flex-col w-full md:w-1/2  justify-center gap-4 p-4 ">
-				</div>
-			</div>
-		</div>
-		<div class="relative flex justify-start">
-			<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-200
-			 p-6">
-			 <div class="bg-slate-100 text-center p-3 drop-shadow-md">
+	<div class="flex items-center h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/F8QfWUB.png')" >
+		<div class="w-3/4 lg:w-1/2 mx-auto p-10 sticky top-1/4">
+			<div class="bg-white text-center p-3 drop-shadow-md">
 				<Text teksttype="brødtekst" font="sans" color="black">
 					I sommeren 2025 fortalte Irans præsident Masoud Pezeshkian at alle afghanere
 					skulle hjemsendes til Afghanistan, og at vi ikke længere var velkomne i Iran.
 					</Text>
-			</div>
-			<div class="bg-slate-100 text-center p-3 drop-shadow-md">
+			</div></div>
+	</div>
+	<div class="flex items-center h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/KHRPqvH.png')" >
+		<div class="w-3/4 lg:w-1/2 mx-auto p-10 sticky top-1/4">
+			<div class="bg-white text-center p-3 drop-shadow-md">
 				<Text teksttype="brødtekst" font="sans" color="black">
-					Mine forældre, tre bødre, fire søste og jeg fik ikke lang tid før vi blev tvangsudsendt
+					Mine forældre, tre bødre, to søste og jeg fik ikke lang tid før vi blev tvangsudsendt
 					d. 24 juni 2025.
 					</Text>
+					</div>
 			</div>
-			<div class="bg-slate-100 text-center p-3 drop-shadow-md">
-				<Text teksttype="brødtekst" font="sans" color="black">
-					Vi blev tvangsudsendt til en land, hvor jeg har rødder, men ingen kendskab.
-					</Text>
-			</div>
-			<div class="bg-slate-100 text-center p-3 drop-shadow-md">
-				<Text teksttype="brødtekst" font="sans" color="black">
-					Tvagsudsendt til et land, som mine forældre desperat flygtede fra for over 40 år siden.
-					</Text>
-			</div>
-			</div>
-		</div>
-		<div class="h-[100vh]"></div>
-	</article>
+	</div>
+
+	<!-- CROSSFADE VANDRING MOD AFGHANISTAN -->
+	<section class="py-25 bg-white">
+	<section class="crossfadeimages relative overflow-hidden h-screen w-full flex justify-center">
+		<img src="https://i.imgur.com/E19TsRK.png" alt="" class="crossfadetopimg object-cover h-screen absolute top-0 z-0 my-0">
+		<img src="https://i.imgur.com/2TdhtUc.png" alt="" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0">
+	</section>
+	</section>
 
 	<!-- SECTION 5 - MINAS HISTORIE PART 4-->
 	<section id="section5">
@@ -358,35 +344,49 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 
 	<!-- SECTION 10 - TIDSLINJE OVER AFGHANISTAN DE SIDSTE 30 ÅR-->
 	<section id="section10">
-	<div class="bg-white p-8">
+	<div class="bg-blank p-8">
 			<Heading htmlheading="h2" size="large" font="serif" color="black">Afghanistan de sidste 40 år</Heading>
 	</div>
 
-		 <div class="overflow-clip bg-white">
+		 <div class="overflow-clip bg-blank xs:hidden md:block ">
 			<section id="horisontalscrollsection" class="h-[1000vw]">
 				<ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
 						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/OC40RIF.png" alt="Sovjetiske tropper i Afghanistan">
-							<div class="pl-4">
+							<figcaption class="min-w-[30ch] pl-4">
+								<div class="pb-1">
 								<Heading htmlheading="h2" size="large" font="serif" color="red">1979</Heading>
+								</div>
 								<Heading htmlheading="h2" size="medium" font="serif" color="black">Sovjetunionen invaderer Afghanistan</Heading>
 								<Text teksttype="brødtekst" font="serif" color="black">
 									Begyndelsen på årtier med konflikt, ustabilitet og millioner af flygtninge.
 								</Text>
-							</div></figure></li>
+							</figcaption></figure></li>
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
-						<figure class="flex flex-row max-w-[900px]"><img src="https://i.imgur.com/UXkzMOM.jpeg" alt="Taliban i 1996">
-							<figcaption class="pl-4">
+						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/UXkzMOM.jpeg" alt="Taliban i 1996">
+							<figcaption class="min-w-[30ch] pl-4">
+								<div class="pb-1">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">1996</Heading>
+								</div>
+								<div class="pb-1">
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban kommer til magten for første gang</Heading>
+								</div>
 									<Text teksttype="brødtekst" font="serif" color="black">
 									Kvinder udelukkes fra uddannelse og arbejde. Strenge religiøse love bliver indført.
 									</Text>
 							</figcaption></figure></li>
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
 						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/mbVdER8.png" alt="9/11">
-							<figcaption class="pl-4">
-									<Heading htmlheading="h2" size="large" font="serif" color="red">11 september 2001</Heading>
+							<figcaption class="min-w-[30ch] pl-4">
+								<div class="pb-1">
+									<Heading htmlheading="h2" size="large" font="serif" color="red">11</Heading>
+								</div>
+								<div class="pb-1">
+									<Heading htmlheading="h2" size="large" font="serif" color="red">september</Heading>
+								</div>
+								<div class="pt-1">
+									<Heading htmlheading="h2" size="large" font="serif" color="red">2001</Heading>
+								</div>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Terrorangrebene på World Trade Center i USA d. 11 september</Heading>
 									<Text teksttype="brødtekst" font="serif" color="black">
 									USA og allierede invaderer Afghanistan kort efter for at fjerne al-Qaeda og Taliban.
@@ -394,7 +394,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</figcaption></figure></li>
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
 						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/icmhsLA.png" alt="Taliban bliver afsat">
-							<figcaption class="pl-4">
+							<figcaption class="min-w-[30ch] pl-4">
 								 	<Heading htmlheading="h2" size="large" font="serif" color="red">Oktober 2001</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban bliver afsat</Heading>
 									<Text teksttype="brødtekst" font="serif" color="black">
@@ -403,7 +403,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</figcaption></figure></li>
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
 						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/OnKWj1h.png" alt="Fremskidt">
-							<figcaption class="pl-4">
+							<figcaption class="min-w-[30ch] pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">2001–2021</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">To årtier med håb og fremskridt</Heading>
 									<Text teksttype="brødtekst" font="serif" color="black">
@@ -412,16 +412,18 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</figcaption></figure></li>				
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
 						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/m4bS3ME.png" alt="Angreb på pigeskole i Kabul">
-							<figcaption class="pl-4">
+							<figcaption class="min-w-[30ch] pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">Maj 2021</Heading>
+									<div class="pb-1">
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Angreb på en pigeskole i Kabul</Heading>
+								</div>
 									<Text teksttype="brødtekst" font="serif" color="black">
 										Mindst 60 piger dræbt og 200 såret – et brutalt varsel om, hvad der venter.
 									</Text>
 									</figcaption></figure></li>	
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
 						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/uQQ50at.png" alt="Taliban overtager magten igen">
-							<figcaption class="pl-4">
+							<figcaption class="min-w-[30ch] pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">August 2021</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban overtager magten igen</Heading>
 									<Text teksttype="brødtekst" font="serif" color="black">
@@ -430,7 +432,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</figcaption></figure></li>	
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
 						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/Ok9RKjN.png" alt="Talibans forbud mod pigers skolegang">
-							<figcaption class="pl-4">
+							<figcaption class="min-w-[30ch] pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">Efteråret 2021</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban forbyder piger at gå i skole efter sjette klasse</Heading>
 									<Text teksttype="brødtekst" font="serif" color="black">
@@ -439,7 +441,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</figcaption></figure></li>		
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
 						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/k7lSI2b.png" alt="Talibans forbud mod kvinder i arbejde">
-							<figcaption class="pl-4">
+							<figcaption class="min-w-[30ch] pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">2022</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Nye restriktioner mod kvinder</Heading>
 									<Text teksttype="brødtekst" font="serif" color="black">
@@ -449,7 +451,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 									</figcaption></figure></li>				
 					<li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
 						<figure class="flex flex-row max-w-[800px]"><img src="https://i.imgur.com/inyizHu.png" alt="Taliban forbyder kvinders stemmer offentligt">
-							<figcaption class="pl-4">
+							<figcaption class="min-w-[30ch] pl-4">
 									<Heading htmlheading="h2" size="large" font="serif" color="red">August 2024</Heading>
 									<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban forbyder, at kvinders stemmer må høres offentligt</Heading>
 									<Text teksttype="brødtekst" font="serif" color="black">
@@ -459,6 +461,153 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				</ul>
 			</section>
 		</div>
+
+		<!-- MOBILE VERSION TIDSLINJE -->
+		<section id="section10 xs:block md:hidden">
+			<div class="bg-blank">
+				<div>
+				<div>
+					<ul id="stagger" class="text-start py-15 px-15">
+						<li class="staggeranimation">
+							<figure>
+								<img src="https://i.imgur.com/OC40RIF.png" alt="Sovjetiske tropper i Afghanistan">
+								<figcaption class="">
+									<div class="pt-3">
+									<Heading htmlheading="h2" size="large" font="serif" color="red">1979</Heading>
+									</div>
+									<Heading htmlheading="h2" size="medium" font="serif" color="black">Sovjetunionen invaderer Afghanistan</Heading>
+									<Text teksttype="brødtekst" font="serif" color="black">
+										Begyndelsen på årtier med konflikt, ustabilitet og millioner af flygtninge.
+									</Text>
+								</figcaption></figure>
+						</li>
+						<li class="staggeranimation pt-8">
+							<figure>
+								<img src="https://i.imgur.com/UXkzMOM.jpeg" alt="Taliban i 1996">
+								<figcaption>
+									<div class="pt-3">
+										<Heading htmlheading="h2" size="large" font="serif" color="red">1996</Heading>
+									</div>
+									<div class="pb-1">
+										<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban kommer til magten for første gang</Heading>
+									</div>
+										<Text teksttype="brødtekst" font="serif" color="black">
+										Kvinder udelukkes fra uddannelse og arbejde. Strenge religiøse love bliver indført.
+										</Text>
+								</figcaption></figure>
+						</li>
+						<li class="staggeranimation pt-8">
+							<figure>
+								<img src="https://i.imgur.com/mbVdER8.png" alt="9/11">
+								<figcaption>
+									<div class="pt-3">
+										<Heading htmlheading="h2" size="large" font="serif" color="red">11 september 2001</Heading>
+									</div>
+										<Heading htmlheading="h2" size="medium" font="serif" color="black">Terrorangrebene på World Trade Center i USA d. 11 september</Heading>
+										<Text teksttype="brødtekst" font="serif" color="black">
+										USA og allierede invaderer Afghanistan kort efter for at fjerne al-Qaeda og Taliban.
+										</Text>
+										</figcaption></figure>
+						</li>
+						<li class="staggeranimation pt-8">
+							<figure>
+								<img src="https://i.imgur.com/icmhsLA.png" alt="Taliban bliver afsat">
+								<figcaption>
+									<div class="pt-3">
+										 <Heading htmlheading="h2" size="large" font="serif" color="red">Oktober 2001</Heading>
+										</div>
+										<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban bliver afsat</Heading>
+										<Text teksttype="brødtekst" font="serif" color="black">
+											En ny regering dannes med støtte fra internationale styrker. For første gang i årtier får mange piger igen adgang til skole.
+										</Text>
+										</figcaption></figure>
+						</li>
+						<li class="staggeranimation pt-8">
+							<figure>
+								<img src="https://i.imgur.com/OnKWj1h.png" alt="Fremskidt">
+								<figcaption>
+									<div class="pt-3">
+										<Heading htmlheading="h2" size="large" font="serif" color="red">2001–2021</Heading>
+									</div>
+										<Heading htmlheading="h2" size="medium" font="serif" color="black">To årtier med håb og fremskridt</Heading>
+										<Text teksttype="brødtekst" font="serif" color="black">
+											Millioner af piger begynder i skole. Kvinder får stemmer, karrierer og drømme for fremtiden. Men usikkerheden og truslerne mod rettighederne forbliver.
+										</Text>
+										</figcaption></figure>
+						</li>
+						<li class="staggeranimation pt-8">
+							<figure>
+								<img src="https://i.imgur.com/m4bS3ME.png" alt="Angreb på pigeskole i Kabul">
+								<figcaption>
+									<div class="pt-3">
+										<Heading htmlheading="h2" size="large" font="serif" color="red">Maj 2021</Heading>
+									</div>
+										<Heading htmlheading="h2" size="medium" font="serif" color="black">Angreb på en pigeskole i Kabul</Heading>
+										<Text teksttype="brødtekst" font="serif" color="black">
+											Mindst 60 piger dræbt og 200 såret – et brutalt varsel om, hvad der venter.
+										</Text>
+										</figcaption></figure>
+						</li>
+						<li class="staggeranimation pt-8">
+							<figure>
+								<img src="https://i.imgur.com/uQQ50at.png" alt="Taliban overtager magten igen">
+								<figcaption>
+									<div class="pt-3">
+										<Heading htmlheading="h2" size="large" font="serif" color="red">August 2021</Heading>
+									</div>
+										<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban overtager magten igen</Heading>
+										<Text teksttype="brødtekst" font="serif" color="black">
+											Den afghanske regering kollapser. Kvinders og pigers rettigheder bliver hurtigt rullet tilbage.
+										</Text>
+										</figcaption></figure>
+						</li>
+						<li class="staggeranimation pt-8">
+							<figure>
+								<img src="https://i.imgur.com/Ok9RKjN.png" alt="Talibans forbud mod pigers skolegang">
+								<figcaption>
+									<div class="pt-3">
+										<Heading htmlheading="h2" size="large" font="serif" color="red">Efteråret 2021</Heading>
+									</div>
+										<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban forbyder piger at gå i skole efter sjette klasse</Heading>
+										<Text teksttype="brødtekst" font="serif" color="black">
+										Tusindvis af skoler står tomme, og lærere mister deres arbejde.
+										</Text>
+										</figcaption></figure>
+							</li>
+						<li class="staggeranimation pt-8">
+							<figure>
+								<img src="https://i.imgur.com/k7lSI2b.png" alt="Talibans forbud mod kvinder i arbejde">
+							<figcaption>
+								<div class="pt-3"> 
+								<Heading htmlheading="h2" size="large" font="serif" color="red">2022</Heading>
+							</div>
+								<Heading htmlheading="h2" size="medium" font="serif" color="black">Nye restriktioner mod kvinder</Heading>
+								<Text teksttype="brødtekst" font="serif" color="black">
+									November: kvinder forbydes at arbejde for NGO’er og FN.
+									December: kvinder forbydes at gå på universitetet. 
+								</Text>
+								</figcaption></figure>
+						</li>
+						<li class="staggeranimation pt-8">
+							<figure>
+								<img src="https://i.imgur.com/inyizHu.png" alt="Taliban forbyder kvinders stemmer offentligt">
+								<figcaption>
+									<div class="pt-3">
+										<Heading htmlheading="h2" size="large" font="serif" color="red">August 2024</Heading>
+									</div>
+										<Heading htmlheading="h2" size="medium" font="serif" color="black">Taliban forbyder, at kvinders stemmer må høres offentligt</Heading>
+										<Text teksttype="brødtekst" font="serif" color="black">
+											Selv radio og tv-sendere fjernes, hvis kvinder medvirker. 
+										</Text>
+										</figcaption></figure>
+						</li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</section>
+
+
 	</section>
 
 	<!-- SECTION 11 - DATAVIZ:UNGDOMSLÆSEFÆRDIGHED -->
@@ -770,6 +919,15 @@ scroll(
 		opacity: [1, 0]
 	}), {
 		target: document.querySelector(".crossfadeimages"),
+		offset: ["-25vh", "25vh"]
+	}
+	);
+	
+	scroll(
+	animate(".crossfadebottomimg2", {
+		opacity: [1, 0]
+	}), {
+		target: document.querySelector(".crossfadeimages2"),
 		offset: ["-25vh", "25vh"]
 	}
 	);
