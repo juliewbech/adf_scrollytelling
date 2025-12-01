@@ -82,6 +82,13 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</section>
 
 	<!-- SECTION 1 - START MINAS HISTORIE-->
+
+	<section id="lydeffekter" x-data>
+		<audio x-ref="trykforatafspillelyd">
+			<source src="https://drive.google.com/uc?export=download&id=19cAyw5eXD5xINL5dJF97wAJCPyvZicCz" type="audio/mpeg">
+		</audio>
+	</section>
+
 	<section id="section1">
 		<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
 			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4">
@@ -95,8 +102,9 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 					Klik her
 					</Text>
 				</div>
-				<a href="#section2"><button
-					class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-5 tracking-wider shadow-xl animate-bounce hover:animate-none">
+				<a href="#section2" loading="lazy" @click="$refs.trykforatafspillelyd.play()" class="cursor cursor-(--handcursor)"><button
+					class=" rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-5 tracking-wider shadow-xl animate-bounce hover:animate-none"
+					>
 					<svg
   					class="w-8 h-8"
   					stroke="white"
