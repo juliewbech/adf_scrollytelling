@@ -55,7 +55,7 @@ import Betalingsform from "../components/Betalingsform.astro";
 			</div>
 			<div class="absolute bottom-10 z-20 w-full flex justify-center fadeUp">
 	
-<a href="#section2" class="animate-bounce hover:animate-none justify-center flex flex-col items-center gap-4">
+<a href="#section1" class="animate-bounce hover:animate-none justify-center flex flex-col items-center gap-4">
 	<Text teksttype="konsultativ" font="sans" color="white"> Dyk ned i Minas historie </Text>
 	<button
 class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-6 tracking-wider shadow-xl"
@@ -81,14 +81,14 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 	</section>
 
-	<!-- SECTION 1 - START MINAS HISTORIE-->
-
+	<!-- BAGGRUNDSMUSIK -->
 	<section id="lydeffekter" x-data>
 		<audio x-ref="trykforatafspillelyd">
 			<source src="https://drive.google.com/uc?export=download&id=19cAyw5eXD5xINL5dJF97wAJCPyvZicCz" type="audio/mpeg">
 		</audio>
 	</section>
 
+	<!-- SECTION 1 - START MINAS HISTORIE-->
 	<section id="section1">
 		<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
 			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
@@ -133,8 +133,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</section> 
 	</article>
 
-	<!-- SECTION 2 - MINAS HISTORIE PART 1 -->
-	<article id="section2">
+	<!-- SECTION 3 - MINAS HISTORIE PART 1 -->
+	<article id="section3">
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/7z6EyAx.png')" ><!-- sticky elementet med lidt ekstra indhold -->
 			<div class="flex justify-start h-full">
 				<div class="flex flex-col w-full md:w-1/2  justify-center gap-4 p-4 ">
@@ -182,8 +182,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		<div class="h-[100vh]"></div>
 	</article>
 
-	<!-- SECTION 3 - MINAS HISTORIE PART 2-->
-	<section id="section3">
+	<!-- SECTION 4 - MINAS HISTORIE PART 2-->
+	<section id="section4">
 	<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
 		<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
 				<Heading htmlheading="h1" size="large" font="serif" color="white">Men en dag ændrede alt sig for Mina og hendes familie...</Heading>
@@ -193,7 +193,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</div>
 	</section>
 
-	<!-- SECTION - 4 MINAS HISTORIE PART 3-->
+	<!-- SECTION - 5 MINAS HISTORIE PART 3-->
+	 <section id="section5">
 	<div class="flex items-center h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/F8QfWUB.png')" >
 		<div class="w-3/4 lg:w-1/2 mx-auto sticky top-1/4">
 			<div class="bg-white text-center p-3 drop-shadow-md">
@@ -214,24 +215,25 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 	</div>
 
-	<!-- CROSSFADE VANDRING MOD AFGHANISTAN -->
-	<section class="md:py-25 bg-white">
-	<section class="crossfadeimages relative overflow-hidden h-screen w-full flex justify-center">
-		<img src="https://i.imgur.com/E19TsRK.png" alt="" class="crossfadetopimg object-cover h-screen absolute top-0 z-0 my-0">
-		<img src="https://i.imgur.com/2TdhtUc.png" alt="" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0">
-	</section>
-	</section>
+		<!-- CROSSFADE VANDRING MOD AFGHANISTAN -->
+		<section class="md:py-25 bg-white">
+			<section class="crossfadeimages relative overflow-hidden h-screen w-full flex justify-center">
+				<img src="https://i.imgur.com/E19TsRK.png" alt="" class="crossfadetopimg object-cover h-screen absolute top-0 z-0 my-0">
+				<img src="https://i.imgur.com/2TdhtUc.png" alt="" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0">
+			</section>
+			</section>
+		
+			<!-- CROSSFADE KORT OVER AFGHANISTAN -->
+			<section class="bg-white">
+				<section class="crossfadeimages2 relative overflow-hidden h-screen w-full flex justify-center">
+					<img src="https://i.imgur.com/eBQWI0m.jpeg" alt="Afghanistan" class="crossfadetopimg2 object-cover h-screen absolute top-0 z-0 my-0">
+					<img src="https://i.imgur.com/maK3oRC.jpeg" alt="Iran" class="crossfadebottomimg2 object-cover h-screen absolute top-0 z-0 my-0">
+				</section>
+			</section>
+     </section>
 
-	<!-- CROSSFADE KORT OVER AFGHANISTAN -->
-	<section class="bg-white">
-		<section class="crossfadeimages2 relative overflow-hidden h-screen w-full flex justify-center">
-			<img src="https://i.imgur.com/eBQWI0m.jpeg" alt="Afghanistan" class="crossfadetopimg2 object-cover h-screen absolute top-0 z-0 my-0">
-			<img src="https://i.imgur.com/maK3oRC.jpeg" alt="Iran" class="crossfadebottomimg2 object-cover h-screen absolute top-0 z-0 my-0">
-		</section>
-		</section>
-
-	<!-- SECTION 5 - MINAS HISTORIE PART 4-->
-	<section id="section5">
+	<!-- SECTION 6 - MINAS HISTORIE PART 4-->
+	<section id="section6">
 	<div class="flex items-center h-screen w-full bg-cover bg-center bg-white" >
 			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
 				<Heading htmlheading="h1" size="large" font="serif" color="black">Hvad var det for et land Mina og hendes familie blev sendt til?</Heading>
@@ -239,8 +241,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</div>
 	</section>
 
-	<!-- SECTION 6 - MINAS HISTORIE PART 5-->
-
+	<!-- SECTION 7 - MINAS HISTORIE PART 5-->
+	<section id="section7">
 	<div class="flex items-center h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/odbxHlo.png')" >
 		<div class="w-3/4 lg:w-1/2 mx-auto sticky top-1/4">
 			<div class="bg-white text-center p-3 drop-shadow-md">
@@ -276,17 +278,18 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</div>
 		<div class="h-[100vh]"></div>
 	</article>
+	</section>
 
-	<!-- SECTION 7 - MINAS HISTORIE PART 6-->
-	<section id="section7">
+	<!-- SECTION 8 - MINAS HISTORIE PART 6-->
+	<section id="section8">
 	<div class="flex items-center h-screen w-full bg-cover bg-center bg-black" >
 			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
 				<Heading htmlheading="h1" size="large" font="serif" color="white">Men især anderledes for kvinder og piger...</Heading>
 			</div>
 	</section>
 
-	<!-- SECTION 8 - MINAS HISTORIE PART 7-->
-	<section id="section8" class="md::block lg:block xs:hidden ">
+	<!-- SECTION 9 - MINAS HISTORIE PART 7-->
+	<section id="section9" class="md::block lg:block xs:hidden ">
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/pJLzTeo.png')">
 			<div class="grid grid-cols-2 gap-4">
 				<div></div>
@@ -351,8 +354,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</div>
 	</section>
 
-	<!-- SECTION 8 - MINAS HISTORIE PART 7 MOBILE VERSION-->
-	<section id="section8" class="md:hidden xs:block lg:hidden">
+	<!-- SECTION 10 - MINAS HISTORIE PART 7 MOBILE VERSION-->
+	<section id="section10" class="md:hidden xs:block lg:hidden">
 		<img src="https://i.imgur.com/pJLzTeo.png" alt="Mina i burqa">
 		<div></div>
 		<div>
@@ -414,8 +417,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</div>
 	</section>
 
-	<!-- SECTION 9 - AFGHANISTANS HISTORIE - HVORDAN GIK DET TIL? -->
-	<section id="section9">
+	<!-- SECTION 11 - AFGHANISTANS HISTORIE - HVORDAN GIK DET TIL? -->
+	<section id="section11">
 			<div class="flex items-center h-screen w-full bg-cover bg-center bg-black" >
 				<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
 					<Heading htmlheading="h3" size="medium" font="sans" color="white">AFGHANISTANS HISTORIE</Heading>
@@ -425,8 +428,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 	</section>
 
-	<!-- SECTION 10 - TIDSLINJE OVER AFGHANISTAN DE SIDSTE 30 ÅR-->
-	<section id="section10">
+	<!-- SECTION 12 - TIDSLINJE OVER AFGHANISTAN DE SIDSTE 30 ÅR-->
+	<section id="section12">
 	<div class="bg-blank p-8">
 			<Heading htmlheading="h2" size="large" font="serif" color="black">Afghanistan de sidste 40 år</Heading>
 	</div>
@@ -693,8 +696,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 
 	</section>
 
-	<!-- SECTION 11 - DATAVIZ:UNGDOMSLÆSEFÆRDIGHED -->
-	<section id="section11" class="bg-fffff h-[100vh] mx-auto p-8 fadeUp">
+	<!-- SECTION 13 - DATAVIZ:UNGDOMSLÆSEFÆRDIGHED -->
+	<section id="section13" class="bg-fffff h-[100vh] mx-auto p-8 fadeUp">
 			<div class="pt-40">
 			<Heading htmlheading="h2" size="large" font="serif" color="black">Ungdomslæsefærdighed i Afghanistan i 2022</Heading>
 		</div>
@@ -704,8 +707,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			<div class="flourish-embed flourish-chart md:pt-10 md:mx-8 xs:pt-10" data-src="visualisation/26180539"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26180539/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 	</section>
 
-	<!-- SECTION 12 - MEN DU KAN VÆRE MED -->
-	<section id="section12">
+	<!-- SECTION 14 - MEN DU KAN VÆRE MED -->
+	<section id="section14">
 		<div class="flex items-center h-screen w-full bg-cover bg-center bg-secondary-500" >
 			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
 				<Heading htmlheading="h3" size="medium" font="sans" color="white">ADF & VORES ARBEJDE</Heading>
@@ -715,8 +718,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</div>
 	</section>
 
-	<!-- SECTION 13 ADF - HVEM ER VI? -->
-	<article id="section13">
+	<!-- SECTION 15 ADF - HVEM ER VI? -->
+	<article id="section15">
 			<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/JPq9jcC.jpeg')" ><!-- sticky elementet med lidt ekstra indhold -->
 				<div class="flex justify-start h-full">
 					<div class="flex flex-col md:w-1/2 gap-4">
@@ -745,8 +748,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			<div class="h-[100vh]"></div>
 	</article>
 		
-	<!-- SECTION 14 ADF - VISION & MISSION -->
-	<article id="section14">
+	<!-- SECTION 16 ADF - VISION & MISSION -->
+	<article id="section16">
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/UO7nwx1.png')" ></div><!-- sticky elementet -->
 		<div class="relative flex justify-end"><!-- relative elementet -->
 			<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-8 p-4 ">
@@ -767,8 +770,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		<div class="h-[100vh]"></div><!-- afstandsstykket -->
 	</article>
 
-	<!-- SECTION 15 - ADF - DATAVIZ:NÆGTET SKOLEGANG -->
-	<article id="section15" class="overflow-hidden md:h-[100vh]">
+	<!-- SECTION 17 - ADF - DATAVIZ:NÆGTET SKOLEGANG -->
+	<article id="section17" class="overflow-hidden md:h-[100vh]">
 			<div class=" bg-white md:grid grid-cols-2" >
 				<div class="fadeUp">
 					<div class="flourish-embed flourish-number-ticker md:pt-25 xs:p-8" data-src="visualisation/26183455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26183455/thumbnail" width="100%" alt="number-ticker visualization" /></noscript></div>
@@ -779,8 +782,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 	</article>
 
-    <!-- SECTION 16 - ADF - HVORFOR ER UDDANNELSE VIGTIGT? -->
-    <article id="section16">
+    <!-- SECTION 18 - ADF - HVORFOR ER UDDANNELSE VIGTIGT? -->
+    <article id="section18">
 	<div class="bg-primary-500 overflow-hidden md:h-[100vh]" >
 		<section class="md:grid grid-cols-2">
 			<div class="">
@@ -807,8 +810,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</div>
     </article>
 
-    <!-- SECTION 17 - ADF - DATAVIZ:RESULTATER -->
-    <section id="section17" class="md:grid grid-cols-4 md:my-30 xs:my-20 mx-2 text-center font-serif text-7xl text-secondary-500 fadeUp">
+    <!-- SECTION 19 - ADF - DATAVIZ:RESULTATER -->
+    <section id="section19" class="md:grid grid-cols-4 md:my-30 xs:my-20 mx-2 text-center font-serif text-7xl text-secondary-500 fadeUp">
 	<article>
 		<div x-data="{ current: 0, target: 5300, time: 700}" x-init="() => {
 			start = current; 
@@ -892,8 +895,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 </article>
     </section>
 
-    <!-- SECTION 18 - ADF - VI GØR EN FORSKEL -->
-	<article id="section18">
+    <!-- SECTION 20 - ADF - VI GØR EN FORSKEL -->
+	<article id="section20">
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/DJUzShf.jpeg')" ><!-- sticky elementet med lidt ekstra indhold -->
 			<div class="flex justify-start h-full">
 				<div class="flex flex-col w-full md:w-1/2 justify-start gap-4 ">
@@ -913,8 +916,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		<div class="h-[100vh]"></div>
 	</article>
 
- 	<!-- SECTION 19 - ADF - VORES MÅL -->
-  	<article id="section19" class="bg-white p-10 ">
+ 	<!-- SECTION 21 - ADF - VORES MÅL -->
+  	<article id="section21" class="bg-white p-10 ">
 	<Heading htmlheading="h2" size="large" font="serif" color="red">Vores mål</Heading>
 	<section class="md:grid grid-cols-3 md:my-10 md:mx-8 md:pt-8 fadeUp">
 	<div class="text-center justify-items-center mx-8">
@@ -933,8 +936,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 </section>
 	</article>
 
-	<!-- SECTION 20 - VIDEO AF LEGENDE PIGE -->
-	<section id="section20">
+	<!-- SECTION 22 - VIDEO AF LEGENDE PIGE -->
+	<section id="section22">
 		<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
 			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
 				<div class="md:p-8">
@@ -952,8 +955,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</div>
 </section>
 
-	<!-- SECTION 21 - SÅDAN STØTTER DU - VIL DU VÆRE MED? -->
-	<section id="section21">
+	<!-- SECTION 23 - SÅDAN STØTTER DU - VIL DU VÆRE MED? -->
+	<section id="section23">
 		<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
 			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
 				<Heading htmlheading="h3" size="medium" font="sans" color="white">SÅDAN STØTTER DU</Heading>
@@ -963,8 +966,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</div>
 </section>
 
- 	<!-- SECTION 22 - SÅDAN STØTTER DU - DONATIONSFORMULAR -->
-  	<article id="section22">
+ 	<!-- SECTION 24 - SÅDAN STØTTER DU - DONATIONSFORMULAR -->
+  	<article id="section24">
 	<div class=" top-0 left-0 right-0 bottom-0 h-[150vh] w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/fAwgeuA.jpeg')" >
 		<section class="flex justify-center text-center p-16">
 			<div>
@@ -977,8 +980,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</div>
 	</article>
 
- 	<!-- SECTION 23 - SÅDAN STØTTER DU - ANDRE MÅDER AT STØTTE PÅ -->
- 	<article id="section23">
+ 	<!-- SECTION 25 - SÅDAN STØTTER DU - ANDRE MÅDER AT STØTTE PÅ -->
+ 	<article id="section25">
 	<div class=" top-0 left-0 right-0 bottom-0 w-full bg-white p-8 text-center" >
 		<Heading htmlheading="h1" size="medium" font="serif" color="black">Andre måder du kan støtte på</Heading>
 		<section class="md:grid grid-cols-3 md:mx-8 fadeUp">
