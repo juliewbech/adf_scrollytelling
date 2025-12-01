@@ -42,14 +42,14 @@ import Betalingsform from "../components/Betalingsform.astro";
 			
 		  
 			  {/* Content */}
-			  <div class="hero-content text-neutral-content top-105 z-20 p-8 relative">
+			  <div class="hero-content text-neutral-content xs:top-100 md:top-105 z-20 p-8 relative">
 				<div class="md:mb-4">
 					<Heading htmlheading="h1" size="large" font="serif" color="white">Afghanske piger</Heading>
 				</div>
 				<div class="md:mb-8">
 					<Heading htmlheading="h1" size="large" font="serif" color="white">fratages ret til uddannelse</Heading>
 				</div>
-				<div>
+				<div class="xs:pt-6">
 					<a href="#section22"><Button variant="primary"size="medium">Støt nu</Button></a>
 				</div>
 			</div>
@@ -187,7 +187,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 
 	<!-- SECTION - 4 MINAS HISTORIE PART 3-->
 	<div class="flex items-center h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/F8QfWUB.png')" >
-		<div class="w-3/4 lg:w-1/2 mx-auto p-10 sticky top-1/4">
+		<div class="w-3/4 lg:w-1/2 mx-auto sticky top-1/4">
 			<div class="bg-white text-center p-3 drop-shadow-md">
 				<Text teksttype="brødtekst" font="sans" color="black">
 					I sommeren 2025 fortalte Irans præsident Masoud Pezeshkian at alle afghanere
@@ -196,10 +196,10 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div></div>
 	</div>
 	<div class="flex items-center h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/KHRPqvH.png')" >
-		<div class="w-3/4 lg:w-1/2 mx-auto p-10 sticky top-1/4">
+		<div class="w-3/4 lg:w-1/2 mx-auto sticky top-1/4">
 			<div class="bg-white text-center p-3 drop-shadow-md">
 				<Text teksttype="brødtekst" font="sans" color="black">
-					Mine forældre, tre bødre, to søste og jeg fik ikke lang tid før vi blev tvangsudsendt
+					Mine forældre, tre bødre, to søstre og jeg fik ikke lang tid før vi blev tvangsudsendt
 					d. 24 juni 2025.
 					</Text>
 					</div>
@@ -207,7 +207,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</div>
 
 	<!-- CROSSFADE VANDRING MOD AFGHANISTAN -->
-	<section class="py-25 bg-white">
+	<section class="md:py-25 bg-white">
 	<section class="crossfadeimages relative overflow-hidden h-screen w-full flex justify-center">
 		<img src="https://i.imgur.com/E19TsRK.png" alt="" class="crossfadetopimg object-cover h-screen absolute top-0 z-0 my-0">
 		<img src="https://i.imgur.com/2TdhtUc.png" alt="" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0">
@@ -266,10 +266,10 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</section>
 
 	<!-- SECTION 8 - MINAS HISTORIE PART 7-->
-	<section id="section8">
+	<section id="section8" class="md::block lg:block xs:hidden ">
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/pJLzTeo.png')">
 			<div class="grid grid-cols-2 gap-4">
-			<div></div>
+				<div></div>
 			<div>
 				<ul id="stagger" class="text-start py-15 px-15 bg-primary-600">
 					<li>
@@ -328,6 +328,69 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				</ul>
 			</div>
 		</div>
+		</div>
+	</section>
+
+	<!-- SECTION 8 - MINAS HISTORIE PART 7 MOBILE VERSION-->
+	<section id="section8" class="md:hidden xs:block lg:hidden">
+		<img src="https://i.imgur.com/pJLzTeo.png" alt="Mina i burqa">
+		<div></div>
+		<div>
+			<ul id="stagger" class="text-start py-15 px-15 bg-primary-600">
+				<li>
+					<Heading htmlheading="h1" size="medium" font="serif" color="white">Talibans regler for mig:</Heading>
+				</li>
+				<li class="staggeranimation">
+					<Text teksttype="brødtekst" font="sans" color="white">
+						Jeg skal nu have en 
+						mørkeblå burqa på, når jeg går udenfor.
+						</Text>
+				</li>
+				<li class="staggeranimation">
+					<Text teksttype="brødtekst" font="sans" color="white">
+						Jeg må ikke gå uden for en dør uden en mand ved min side.
+						</Text>
+				</li>
+				<li class="staggeranimation">
+					<Text teksttype="brødtekst" font="sans" color="white">
+						Selv når jeg bliver stor nok må jeg ikke rejse inde i vores land eller udenfor, uden en mand 
+						og en særlig grund.
+						</Text>
+				</li>
+				<li class="staggeranimation">
+					<Text teksttype="brødtekst"font="sans" color="white">
+						Jeg må ikke besøge parker, fitnesscentre, 
+						skønhedssaloner eller historiske monumenter.
+						</Text>
+				</li>
+				<li class="staggeranimation">
+					<Text teksttype="brødtekst" font="sans" color="white">
+						Jeg må ikke tale, synge, danse eller grine udenfor mit hjem.
+						</Text>
+				</li>
+				<li class="staggeranimation">
+					<Text teksttype="brødtekst" font="sans" color="white">
+						Vinduerne fra mit værelse skal tildækket, da de vender ud mod en park.
+						</Text>
+				</li>
+				<li class="staggeranimation">
+					<Text teksttype="brødtekst" font="sans" color="white">
+						Jeg må ikke gå i skole eller studere fordi jeg er mere end 12 år gammel.
+						</Text>
+				</li>
+				<li class="staggeranimation">
+					<Text teksttype="brødtekst" font="sans" color="white">
+						Jeg kan risikere at blive straffet med piskeslag og stening,
+						hvis jeg bryder nogle af disse regler.
+						</Text>
+					</li>
+				<li class="staggeranimation">
+					<Text teksttype="brødtekst" font="sans" color="white">
+						Jeg bliver nødt til at give op på min drøm
+						om at blive læge.
+						</Text>
+				</li>
+			</ul>
 		</div>
 	</section>
 
