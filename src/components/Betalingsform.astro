@@ -24,7 +24,7 @@ import Heading from "../components/Heading.astro";
         <Button variant="tertiary" size="xlarge" onclick="selectAmount(100)">100 kr.</Button>
       </section>
 
-      <section class="grid grid-cols-2 gap-8 justify-items-center">
+      <section class="grid grid-cols-2 gap-8 pt-4 justify-items-center">
         <Button variant="tertiary" size="xlarge" onclick="selectAmount(250)">250 kr.</Button>
         <Button variant="tertiary" size="xlarge" onclick="selectAmount(400)">400 kr.</Button>
       </section>
@@ -69,11 +69,11 @@ import Heading from "../components/Heading.astro";
       </Text>
       <div class="pb-4">
         <p class="text-start font-paragraf text-white pb-1 text-lg">Navn</p>
-      <input class="w-full" placeholder="Fornavn">
+      <input class="w-full font-paragraf" placeholder="Fornavn">
       </div>
       <input class="w-full" placeholder="Efternavn">
       <p class="text-start font-paragraf text-white pt-3 pb-1 text-lg">Kontaktoplysninger</p>
-      <section class="flex justify-between w-full">
+      <section class="flex justify-between w-full gap-4">
         <input class="w-full" placeholder="E-mail">
         <input class="w-full" placeholder="Tlf. nr.">
     </section>
@@ -138,7 +138,7 @@ import Heading from "../components/Heading.astro";
       </div>
       <input class="w-full" placeholder="Efternavn">
       <p class="text-start font-paragraf text-white pt-3 pb-1 text-lg">Kontaktoplysninger</p>
-      <section class="flex justify-between w-full">
+      <section class="flex justify-between w-full gap-4">
         <input class="w-full" placeholder="E-mail">
         <input class="w-full" placeholder="Tlf. nr.">
     </section>
@@ -148,20 +148,20 @@ import Heading from "../components/Heading.astro";
       <label for="businessCheckbox" class=" text-white font-paragraf text-sm">Jeg betaler på vegne af en virksomhed</label>
     </div>
 
-    <section class="flex justify-between w-full">
+    <section class="flex justify-between w-full gap-4">
       <input class="w-full" placeholder="Virksomhedsnavn">
       <input class="w-full" placeholder="CVR-nummer">
   </section>
     <input class="w-full my-4" placeholder="Land">
     <input class="w-full mb-4" placeholder="Adresse">
-    <section class="flex justify-between w-full mb-4">
+    <section class="flex justify-between w-full mb-4 gap-4">
       <input class="w-full" placeholder="By">
       <input class="w-full" placeholder="Postnummer">
   </section>
 
-  <div class="my-4 text-sm text-center">
+  <div class="my-4 text-sm text-start">
     <input id="businessCheckbox" type="checkbox" class="checkbox" />
-    <label for="businessCheckbox" class=" text-white font-paragraf">Jeg har læst og accepteret abonnementsbetingelserne</label>
+    <label for="businessCheckbox" class=" text-white font-paragraf text-start">Jeg har læst og accepteret abonnementsbetingelserne</label>
   </div>
 
       <div class="flex justify-between w-full mt-8">
@@ -223,7 +223,7 @@ import Heading from "../components/Heading.astro";
         <p class="text-start font-paragraf text-white pb-1 text-lg">Kortnummer</p>
       <input class="w-full" placeholder="1234 1234 1234 1234">
       </div>
-      <section class="flex justify-between w-full">
+      <section class="flex justify-between w-full gap-4">
         <div>
         <p class="text-start font-paragraf text-white pt-3 pb-1 text-lg">Udløbsdato</p>
         <input class="w-full" placeholder="MM/ÅÅ">
@@ -358,8 +358,6 @@ import Heading from "../components/Heading.astro";
   background-color: #96423b;
 }
 
-
-
 #buttonback {
   background-color: #CCCCCC;
   padding: 20px 20px;
@@ -377,6 +375,20 @@ import Heading from "../components/Heading.astro";
 #buttonback:focus {
   background-color: #B6B6B6;
 }
+
+input{
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 4px;
+  text: #CFCFCF;
+  font-family: 'Paragraf', sans-serif;
+}
+
+input:focus{
+  border: 2px solid #B9534B;
+}
+
 
 
 </style>
