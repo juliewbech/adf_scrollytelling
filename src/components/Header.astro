@@ -16,11 +16,11 @@ const currentPath = pathname.slice(1); // remove the first "/"
         <nav id="desktopmenu" class="hidden lg:block">
             <ul class="flex flex-row gap-4 font-paragraf text-xl text-white items-center">
                 <!-- <Text><Link href="/komponentbibliotek" variant="primary" size="small">Komponentbibliotek</Link></Text> -->
-                <Text><Link href="#section2" variant="primary" size="small">Minas historie</Link></Text>
-                <Text><Link href="#section9" variant="primary" size="small">Afghanistans historie</Link></Text>
-                <Text><Link href="#section12" variant="primary" size="small">ADF & vores arbejde</Link></Text>
-                <Text><Link href="#section21" variant="primary" size="small">Sådan støtter du</Link></Text>
-                <a href="#section22"><Button variant="primary"size="medium">Støt nu</Button></a>
+                <Text><Link href="#section1" variant="primary" size="small">Minas historie</Link></Text>
+                <Text><Link href="#section11" variant="primary" size="small">Afghanistans historie</Link></Text>
+                <Text><Link href="#section14" variant="primary" size="small">ADF & vores arbejde</Link></Text>
+                <Text><Link href="#section23" variant="primary" size="small">Sådan støtter du</Link></Text>
+                <a href="#section24"><Button variant="primary"size="medium">Støt nu</Button></a>
                 <!-- <MusicToggle /> -->
             </ul>
         </nav>
@@ -32,12 +32,12 @@ const currentPath = pathname.slice(1); // remove the first "/"
     <nav id="mobilmenu" class="flex flex-col content-center" 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
         <ul class="bg-white pt-4 rounded-md drop-shadow-md">
-            <Text><Link href="#section2" variant="secondary" size="small" color="black">Minas historie</Link></Text>
-                <Text><Link href="#section9" variant="secondary" size="small" color="black">Afghanistans historie</Link></Text>
-                <Text><Link href="#section12" variant="secondary" size="small" color="black">ADF & vores arbejde</Link></Text>
-                <Text><Link href="#section21" variant="secondary" size="small" color="black">Sådan støtter du</Link></Text>
+            <Text><Link href="#section1" variant="secondary" size="small" color="black">Minas historie</Link></Text>
+                <Text><Link href="#section11" variant="secondary" size="small" color="black">Afghanistans historie</Link></Text>
+                <Text><Link href="#section14" variant="secondary" size="small" color="black">ADF & vores arbejde</Link></Text>
+                <Text><Link href="#section23" variant="secondary" size="small" color="black">Sådan støtter du</Link></Text>
                 <section class="grid grid-cols-2 justify-items-center p-4">
-                <a href="#section22"><Button variant="primary"size="medium" color="black">Støt nu</Button></a>
+                <a href="#section24"><Button variant="primary"size="medium" color="black">Støt nu</Button></a>
                 <!-- <MusicToggle /> -->
             </section>
         </ul>
