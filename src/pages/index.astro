@@ -13,6 +13,39 @@ import Betalingsform from "../components/Betalingsform.astro";
 <MainLayout title="Hendes fremtid - Afghan Daanish Foundation">
 <body>
 	<main>
+		<div
+		x-data="{
+			playing: false,
+			fadeDuration: 2000,
+		
+			playPause() {
+				const audio = this.$refs.trykforatafspillelyd;
+				if (!audio) return;
+		
+				if (!this.playing) {
+					audio.volume = 0;
+					audio.play();
+					this.playing = true;
+		
+					// Fade-in
+					const steps = 20;
+					const stepTime = this.fadeDuration / steps;
+					let v = 0;
+					let interval = setInterval(() => {
+						v += 1 / steps;
+						audio.volume = Math.min(v, 1);
+						if (v >= 1) clearInterval(interval);
+					}, stepTime);
+		
+				} else {
+					audio.pause();
+					this.playing = false;
+				}
+			}
+		}"
+	>
+	
+	
 
 	<!-- HERO SECTION -->
 	<section id="hero-section">
@@ -81,50 +114,106 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 	</section>
 
-	<!-- BAGGRUNDSMUSIK -->
-	<section id="lydeffekter" x-data>
-		<audio x-ref="trykforatafspillelyd">
-			<source src="https://drive.google.com/uc?export=download&id=19cAyw5eXD5xINL5dJF97wAJCPyvZicCz" type="audio/mpeg">
-		</audio>
-	</section>
 
-	<!-- SECTION 1 - START MINAS HISTORIE-->
-	<section id="section1">
-		<div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500" >
-			<div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
-				<Heading htmlheading="h3" size="medium" font="sans" color="white">MINAS HISTORIE</Heading>
-				<hr class="my-8">
-				<div class="pb-8">
-					<Text teksttype="konsultativ" font="sans" color="white">
-						Fortællingen opleves bedst med høretelefoner på
-						</Text>
-				<Text teksttype="konsultativ" font="sans" color="white">
-					Klik her
-					</Text>
-				</div>
-				<a href="#section2" loading="lazy" @click="$refs.trykforatafspillelyd.play()" class="cursor cursor-(--handcursor)"><button
-					class=" rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-5 tracking-wider shadow-xl animate-bounce hover:animate-none"
-					>
-					<svg
-  					class="w-8 h-8"
-  					stroke="white"
-  					stroke-width="1"
-  					viewBox="0 0 24 24"
-  					fill="none"
-  					xmlns="http://www.w3.org/2000/svg">
-					<!-- bøjle -->
-					<path d="M4 11.5C5.2 7.5 8.4 5 12 5s6.8 2.5 8 6.5" stroke-linecap="round" stroke-linejoin="round"/>
-					<!-- ørekopper med rundere form -->
-					<rect x="2.5" y="12.5" width="4" height="6" rx="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-					<rect x="17.5" y="12.5" width="4" height="6" rx="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-					<!-- små forbindelsesstykker -->
-					<path d="M6.5 13.5v2" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M17.5 13.5v2" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
-					</button></a>
-			</div>
-		</div>
-	</section>
+    <!-- LYD -->
+    <section id="lydeffekter">
+        <audio x-ref="trykforatafspillelyd" loop>
+            <source src="mixkit-silent-descent-614.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+	<div class="fixed top-4 right-4 z-50">
+		<button 
+			@click="playPause()"
+			class="p-3 rounded-full bg-black/30 backdrop-blur-md border border-white/40 shadow-lg hover:bg-black/40 transition"
+		>
+	
+			<!-- PLAY ikon -->
+			<svg x-show="!playing"
+				class="w-7 h-7"
+				stroke="white"
+				stroke-width="1"
+				viewBox="0 0 24 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<polygon points="6,4 20,12 6,20"/>
+			</svg>
+	
+			<!-- PAUSE ikon -->
+			<svg x-show="playing"
+				class="w-7 h-7"
+				stroke="white"
+				stroke-width="1"
+				viewBox="0 0 24 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<rect x="6" y="4" width="4" height="16"/>
+				<rect x="14" y="4" width="4" height="16"/>
+			</svg>
+	
+		</button>
+	</div>
+	
+
+    <!-- SECTION 1 -->
+    <section id="section1">
+        <div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500">
+            <div class="w-3/4 lg:w-1/2 mx-auto sticky text-center top-1/4 fadeUp">
+                
+                <Heading htmlheading="h3" size="medium" font="sans" color="white">
+                    MINAS HISTORIE
+                </Heading>
+
+                <hr class="my-8">
+
+                <div class="pb-8">
+                    <Text teksttype="konsultativ" font="sans" color="white">
+                        Fortællingen opleves bedst med høretelefoner på
+                    </Text>
+                    <Text teksttype="konsultativ" font="sans" color="white">
+                        Klik her
+                    </Text>
+                </div>
+
+                <a href="#section2">
+                    <button
+                        @click="playPause()"
+                        class="cursor cursor-(--handcursor) rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-5 tracking-wider shadow-xl animate-bounce hover:animate-none"
+                    >
+
+                        <!-- PLAY ikon -->
+                        <svg x-show="!playing"
+                            class="w-8 h-8"
+                            stroke="white"
+                            stroke-width="1"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <polygon points="6,4 20,12 6,20"/>
+                        </svg>
+
+                        <!-- PAUSE ikon -->
+                        <svg x-show="playing"
+                            class="w-8 h-8"
+                            stroke="white"
+                            stroke-width="1"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <rect x="6" y="4" width="4" height="16"/>
+                            <rect x="14" y="4" width="4" height="16"/>
+                        </svg>
+
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
 
 	<!-- SECTION 2 - KORT OVER MELLEMØSTEN -->
 	<article id="section2">
@@ -1018,6 +1107,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</div>
 	</article>
 
+</div>
 	</main>
 </body>
 
