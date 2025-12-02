@@ -312,14 +312,25 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</section>
 			</section>
 		
-			<!-- CROSSFADE KORT OVER AFGHANISTAN -->
-			<section class="bg-white">
+			<!-- CROSSFADE KORT OVER AFGHANISTAN DESKTOP -->
+			<section class="bg-white md:block lg:block xs:hidden">
 				<section class="crossfadeimages2 relative overflow-hidden h-screen w-full flex justify-center">
 					<img src="https://i.imgur.com/eBQWI0m.jpeg" alt="Afghanistan" class="crossfadetopimg2 object-cover h-screen absolute top-0 z-0 my-0">
 					<img src="https://i.imgur.com/maK3oRC.jpeg" alt="Iran" class="crossfadebottomimg2 object-cover h-screen absolute top-0 z-0 my-0">
 				</section>
 			</section>
      </section>
+
+
+	 	<!-- CROSSFADE KORT OVER AFGHANISTAN MOBILE-->
+		 <section class="bg-white xs:block md:hidden lg:hidden">
+			<section class="crossfadeimages3 relative overflow-hidden h-screen w-full flex justify-center">
+				<img src="https://i.imgur.com/h4dqsaJ.jpeg" alt="Afghanistan mobile" class="crossfadetopimg3 object-cover h-screen absolute top-0 z-0 my-0">
+				<img src="https://i.imgur.com/UfN62yS.jpeg" alt="Iran mobile" class="crossfadebottomimg3 object-cover h-screen absolute top-0 z-0 my-0">
+			</section>
+		</section>
+ </section>
+
 
 	<!-- SECTION 6 - MINAS HISTORIE PART 4-->
 	<section id="section6">
@@ -1166,6 +1177,16 @@ scroll(
 		offset: ["-25vh", "25vh"]
 	}
 	);
+
+	scroll(
+	animate(".crossfadebottomimg3", {
+		opacity: [1, 0]
+	}), {
+		target: document.querySelector(".crossfadeimages3"),
+		offset: ["-25vh", "25vh"]
+	}
+	);
+
 
 	/*Progress-baren/læseindikatoren */
 	scroll( animate(".progress-bar", { scaleX: [0, 1] }));
