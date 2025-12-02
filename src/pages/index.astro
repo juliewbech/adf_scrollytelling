@@ -13,6 +13,8 @@ import Betalingsform from "../components/Betalingsform.astro";
 <MainLayout title="Hendes fremtid - Afghan Daanish Foundation">
 <body>
 	<main>
+
+		<!-- ALPINE BAGGRUNDSMUSIK  -->
 		<div
 		x-data="{
 			playing: false,
@@ -114,14 +116,14 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 	</section>
 
-
     <!-- LYD -->
-    <section id="lydeffekter">
+    <section id="baggrundsmusik">
         <audio x-ref="trykforatafspillelyd" loop>
             <source src="mixkit-silent-descent-614.mp3" type="audio/mpeg">
         </audio>
     </section>
 
+	<!-- PLAY/PAUSE KNAP HEADER -->
 	<div class="fixed top-4 right-4 z-50">
 		<button 
 			@click="playPause()"
@@ -156,7 +158,6 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</button>
 	</div>
 	
-
     <!-- SECTION 1 -->
     <section id="section1">
         <div class="flex items-center h-screen w-full bg-cover bg-center bg-primary-500">
@@ -213,7 +214,6 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
             </div>
         </div>
     </section>
-
 
 	<!-- SECTION 2 - KORT OVER MELLEMØSTEN -->
 	<article id="section2">
