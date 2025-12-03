@@ -6,10 +6,8 @@
 @import "tailwindcss-intersect";
 @import "animate.css";
 
-html,
-body {
+html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 @theme {
