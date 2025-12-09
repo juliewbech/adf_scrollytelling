@@ -127,7 +127,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	<div class="fixed top-4 md:right-4 z-50 overflow-hidden xs:right-55">
 		<button 
 			@click="playPause()"
-			class="p-3 rounded-full bg-black/30 backdrop-blur-md border border-white/40 hover:bg-black/40 transition"
+			class="p-3 rounded-full bg-[#8988885c] backdrop-blur-md border border-white/40 hover:bg-black/40 transition"
 		>
 	
 			<!-- PLAY ikon -->
@@ -219,7 +219,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	<article id="section2">
 		  <section class="scrollzoom overflow-clip relative">
 				<img src="https://i.imgur.com/maK3oRC.jpeg" class="scrollzoomimg w-full" alt="kort over Iran">
-				<div class="animate-bounce xs:hidden md:block flex flex-col items-center gap-4 absolute bottom-60 left-1/2 -translate-x-1/2">
+				<div class="animate-bounce xs:hidden md:block flex flex-col items-center gap-4 absolute bottom-60 left-1/2 -translate-x-1/2 fadeUp">
 					<div class="pb-3">
 					<Text teksttype="konsultativ" font="sans" color="white"> Scroll videre </Text>
 				</div>
@@ -228,7 +228,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				>
 				
 				<svg
-				  class="w-8 h-8"
+				  class="w-9 h-9"
 				  stroke="#B9534B"
 				  stroke-width="3"
 				  viewBox="0 0 24 24"
@@ -546,7 +546,31 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 					<Heading htmlheading="h3" size="medium" font="sans" color="white">AFGHANISTANS HISTORIE</Heading>
 					<hr class="my-8">
 					<Heading htmlheading="h1" size="large" font="serif" color="white">Hvordan gik det sådan til i Afghanistan?</Heading>
+				
+				<a href="#hero-section" class="justify-center xs:hidden md:block flex flex-col bottom-10 pt-30 items-center gap-4 transition delay-150 duration-200 ease-in-out hover:-translate-y-2 ">
+					<div class="pb-3">
+					<Text teksttype="konsultativ" font="sans" color="white"> Scroll tilbage </Text>
 				</div>
+					<button
+				class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-4 tracking-wider shadow-xl"
+				>
+				
+				<svg
+				  class="w-5 h-5"
+				  stroke="white"
+				  stroke-width="2"
+				  viewBox="0 0 24 24"
+				  fill="none"
+				  xmlns="http://www.w3.org/2000/svg"
+				>
+				  <path
+				  d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+				  stroke-linejoin="round"
+				  stroke-linecap="round"
+				  ></path>
+				</svg>
+				</button></a>
+			</div>
 			</div>
 	</section>
 
@@ -836,6 +860,30 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				<Heading htmlheading="h3" size="medium" font="sans" color="white">ADF & VORES ARBEJDE</Heading>
 				<hr class="my-8">
 				<Heading htmlheading="h1" size="large" font="serif" color="white">Sammen kan vi ændre på afghanske pigers skæbne</Heading>
+
+				<a href="#hero-section" class="justify-center xs:hidden md:block flex flex-col bottom-10 pt-30 items-center gap-4 transition delay-150 duration-200 ease-in-out hover:-translate-y-2 ">
+					<div class="pb-3">
+					<Text teksttype="konsultativ" font="sans" color="white"> Scroll tilbage </Text>
+				</div>
+					<button
+				class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-4 tracking-wider shadow-xl"
+				>
+				
+				<svg
+				  class="w-5 h-5"
+				  stroke="white"
+				  stroke-width="2"
+				  viewBox="0 0 24 24"
+				  fill="none"
+				  xmlns="http://www.w3.org/2000/svg"
+				>
+				  <path
+				  d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+				  stroke-linejoin="round"
+				  stroke-linecap="round"
+				  ></path>
+				</svg>
+				</button></a>
 			</div>
 		</div>
 	</section>
@@ -905,7 +953,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	</article>
 
     <!-- SECTION 18 - ADF - HVORFOR ER UDDANNELSE VIGTIGT? -->
-    <article id="section18">
+    <!-- <article id="section18">
 	<div class="bg-primary-500 overflow-hidden md:h-[100vh]" >
 		<section class="md:grid grid-cols-2">
 			<div class="">
@@ -929,7 +977,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			</div>
 		</section>
 	</div>
-    </article>
+    </article> -->
 
     <!-- SECTION 19 - ADF - DATAVIZ:RESULTATER -->
     <section id="section19" class="md:grid grid-cols-4 md:my-30 xs:my-20 mx-2 text-center font-serif text-7xl text-secondary-500">
@@ -1083,6 +1131,30 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				<Heading htmlheading="h3" size="medium" font="sans" color="white">SÅDAN STØTTER DU</Heading>
 				<hr class="my-8">
 				<Heading htmlheading="h1" size="large" font="serif" color="white">Vil du være med til at gøre en forskel?</Heading>
+
+				<a href="#hero-section" class="justify-center xs:hidden md:block flex flex-col bottom-10 pt-30 items-center gap-4 transition delay-150 duration-200 ease-in-out hover:-translate-y-2 ">
+					<div class="pb-3">
+					<Text teksttype="konsultativ" font="sans" color="white"> Scroll tilbage </Text>
+				</div>
+					<button
+				class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-4 tracking-wider shadow-xl"
+				>
+				
+				<svg
+				  class="w-5 h-5"
+				  stroke="white"
+				  stroke-width="2"
+				  viewBox="0 0 24 24"
+				  fill="none"
+				  xmlns="http://www.w3.org/2000/svg"
+				>
+				  <path
+				  d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+				  stroke-linejoin="round"
+				  stroke-linecap="round"
+				  ></path>
+				</svg>
+				</button></a>
 			</div>
 		</div>
 </section>
