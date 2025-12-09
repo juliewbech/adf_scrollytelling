@@ -8,8 +8,8 @@ import Heading from "../components/Heading.astro";
 
 <section class="pt-8">
 <!-- STEP 1 BETALINGSFORM -->
-<section id="step1" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl overflow-hidden">
-  <div class="flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8">
+<section id="step1" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-full sm:max-w-md md:max-w-xl overflow-hidden">
+  <div class="flex flex-col items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-4 sm:p-6 md:p-8">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="25" max="100"></progress>
 
@@ -20,18 +20,18 @@ import Heading from "../components/Heading.astro";
         250 kr. = undervisning og skolematerialer til en pige i et år
       </Text>
 
-      <section class="grid grid-cols-2 gap-8 justify-items-center">
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 justify-items-center">
         <Button variant="tertiary" size="xlarge" onclick="selectAmount(50)">50 kr.</Button>
         <Button variant="tertiary" size="xlarge" onclick="selectAmount(100)">100 kr.</Button>
       </section>
 
-      <section class="grid grid-cols-2 gap-8 pt-4 justify-items-center">
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 justify-items-center">
         <Button variant="tertiary" size="xlarge" onclick="selectAmount(250)">250 kr.</Button>
         <Button variant="tertiary" size="xlarge" onclick="selectAmount(400)">400 kr.</Button>
       </section>
 
-      <div class="pt-4 w-sm">
-      <input class="w-full" placeholder="Andet beløb">
+      <div class="pt-4 w-full sm:w-72">
+      <input class="w-full p-2 rounded border border-white bg-transparent text-white" placeholder="Andet beløb">
     </div>
     </div>
 
@@ -60,8 +60,8 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 2 BETALINGSFORM / PRIVATBETALING-->
-<section id="step2" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl overflow-hidden">
-  <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
+<section id="step2" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-full sm:max-w-md md:max-w-xl overflow-hidden">
+  <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-4 sm:p-6 md:p-8">
     <div class="text-black z-[1] opacity-90 rounded-xl inset-0.5 gap-8 text-center">
       <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
 
@@ -125,8 +125,8 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 2 BETALINGSFORM / BUISNESS -->
-<section id="step2Business" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl overflow-hidden">
-  <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
+<section id="step2Business" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-full sm:max-w-md md:max-w-xl overflow-hidden">
+  <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-4 sm:p-6 md:p-8">
     <div class="text-black z-[1] opacity-90 rounded-xl inset-0.5 gap-8 text-center">
       <progress class="progress w-full rounded-full my-progress" value="50" max="100"></progress>
 
@@ -207,8 +207,8 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 3 BETALINGSFORM -->
-<section id="step3" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-xl overflow-hidden">
-  <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
+<section id="step3" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-full sm:max-w-md md:max-w-xl overflow-hidden">
+  <div class="overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-4 sm:p-6 md:p-8">
     <div class="text-black z-[1] opacity-90 rounded-xl inset-0.5 gap-8 text-center">
       <progress class="progress w-full rounded-full my-progress" value="75" max="100"></progress>
 
@@ -281,8 +281,8 @@ import Heading from "../components/Heading.astro";
 </section>
 
 <!-- STEP 4 BETALINGSFORM -->
-<section id="step4" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 max-w-xl overflow-hidden">
-  <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-8 w-full max-w-xl">
+<section id="step4" style="display: none;" class="flex flex-col items-center justify-center gap-4 p-4 max-w-full sm:max-w-md md:max-w-xl overflow-hidden">
+  <div class="relative items-center justify-center overflow-hidden rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] p-4 sm:p-6 md:p-8">
     <div class="flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5 gap-4 text-center">
       <progress class="progress w-full rounded-full my-progress" value="100" max="100"></progress>
       <Heading htmlheading="h2" size="medium" font="serif">Tak for din støtte!</Heading>
