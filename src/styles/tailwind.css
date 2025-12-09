@@ -34,11 +34,11 @@ html {
 }
 
 .my-progress::-moz-progress-bar {
-  background-color: #96423b;
+  background-color: #b9534b;
 }
 
 .my-progress::-webkit-progress-value {
-  background-color: #96423b;
+  background-color: #b9534b;
 }
 .my-progress::-webkit-progress-bar {
   background-color: #e5e7eb;
