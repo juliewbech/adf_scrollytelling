@@ -129,7 +129,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 	<div class="fixed top-4 xs:right-20 md:right-4 z-50 overflow-hidden">
 		<button 
 			@click="playPause()"
-			class="p-3 rounded-full bg-[#8988885c] backdrop-blur-md border border-white/40 hover:bg-black/40 transition"
+			class="p-3 rounded-full shadow-md bg-[#8988885c] backdrop-blur-md border border-white hover:bg-black/40 transition"
 		>
 	
 			<!-- PLAY ikon -->
@@ -418,7 +418,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			<div class="grid grid-cols-2 gap-4">
 				<div></div>
 			<div>
-				<ul id="stagger" class="text-start py-15 px-15 bg-primary-600">
+				<ul id="stagger" class="text-start py-15 px-15 bg-primary-600 shadow-xl">
 					<li>
 						<Heading htmlheading="h1" size="medium" font="serif" color="white">Talibans regler for mig:</Heading>
 					</li>
@@ -925,13 +925,13 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/UO7nwx1.png')" ></div><!-- sticky elementet -->
 		<div class="relative flex justify-end"><!-- relative elementet -->
 			<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-8 p-4 ">
-				<div class="p-10 rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px]">
+				<div class="p-10 rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] shadow-xl">
 					<Heading htmlheading="h2" size="large" font="serif" color="white">Vores vision</Heading>
 				<Text teksttype="brødtekst" font="sans" color="white">
 					 Et Afghanistan, hvor alle børn har adgang til uddannelse og mulighed for at forme deres fremtid.
 					</Text>
 				</div>
-				<div class="p-10 rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px]">
+				<div class="p-10 rounded-[1.5em] border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] shadow-xl">
 					<Heading htmlheading="h2" size="large" font="serif" color="white">Vores mission</Heading>
 				<Text teksttype="brødtekst" font="sans" color="white">
 					 At støtte uddannelsesprojekter, skabe lokale samarbejder og give piger og kvinder mulighed for at lære – selv under vanskelige forhold.
@@ -944,7 +944,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 
 	<!-- SECTION 17 - ADF - DATAVIZ:NÆGTET SKOLEGANG -->
 	<article id="section17" class="overflow-hidden md:h-[100vh]">
-			<div class=" bg-white md:grid grid-cols-2" >
+			<div class=" bg-fffff md:grid grid-cols-2" >
 				<div>
 					<div class="flourish-embed flourish-number-ticker md:pt-25 xs:p-8" data-src="visualisation/26183455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26183455/thumbnail" width="100%" alt="number-ticker visualization" /></noscript></div>
 			</div>
@@ -982,6 +982,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
     </article> -->
 
     <!-- SECTION 19 - ADF - DATAVIZ:RESULTATER -->
+	 
     <section id="section19" class="md:grid grid-cols-4 md:my-30 xs:my-20 mx-2 text-center font-serif text-7xl text-secondary-500">
 	<article>
 		<div x-data="{ current: 0, target: 5300, time: 700}" x-init="() => {
@@ -1065,7 +1066,6 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 		</div>
 </article>
     </section>
-
     <!-- SECTION 20 - ADF - VI GØR EN FORSKEL -->
 	<article id="section20">
 		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('https://i.imgur.com/DJUzShf.jpeg')" ><!-- sticky elementet med lidt ekstra indhold -->
