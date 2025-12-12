@@ -94,7 +94,7 @@ import Betalingsform from "../components/Betalingsform.astro";
 	
 <a href="#section1" class="animate-bounce hover:animate-none justify-center flex flex-col items-center gap-4">
 	<Text teksttype="konsultativ" font="sans" color="white"> Dyk ned i Minas historie </Text>
-	<button
+	<button id="dyknedknap"
 class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-6 tracking-wider shadow-xl"
 >
 
@@ -127,7 +127,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 
 	<!-- PLAY/PAUSE KNAP HEADER -->
 	<div class="fixed top-4 xs:right-20 md:right-4 z-50 overflow-hidden">
-		<button 
+		<button id="playpauseknap"
 			@click="playPause()"
 			class="p-3 rounded-full shadow-md bg-[#8988885c] backdrop-blur-md border border-white hover:bg-black/40 transition"
 		>
@@ -181,7 +181,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
                 </div>
 
                 <a href="#section2">
-                    <button
+                    <button id="playpauseknap2"
                         @click="playPause()"
                         class="cursor cursor-(--handcursor) rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-5 tracking-wider shadow-xl animate-bounce hover:animate-none"
                     >
@@ -225,7 +225,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 					<div class="pb-3">
 					<Text teksttype="konsultativ" font="sans" color="white"> Scroll videre </Text>
 				</div>
-					<button
+					<button id="scrollzoomknap"
 			 class="cursor-pointer xs:p-4 md:p-6 tracking-wider"
 				>
 				
@@ -553,7 +553,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 					<div class="pb-3">
 					<Text teksttype="konsultativ" font="sans" color="white"> Scroll tilbage </Text>
 				</div>
-					<button
+					<button id="scrolltopknap1"
 				class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-4 tracking-wider shadow-xl"
 				>
 				
@@ -867,7 +867,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 					<div class="pb-3">
 					<Text teksttype="konsultativ" font="sans" color="white"> Scroll tilbage </Text>
 				</div>
-					<button
+					<button id="scrolltopknap2"
 				class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-4 tracking-wider shadow-xl"
 				>
 				
@@ -1138,7 +1138,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 					<div class="pb-3">
 					<Text teksttype="konsultativ" font="sans" color="white"> Scroll tilbage </Text>
 				</div>
-					<button
+					<button id="scrolltopknap3"
 				class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-4 tracking-wider shadow-xl"
 				>
 				
