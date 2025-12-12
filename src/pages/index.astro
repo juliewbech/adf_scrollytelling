@@ -87,14 +87,14 @@ import Betalingsform from "../components/Betalingsform.astro";
 					<Heading htmlheading="h1" size="large" font="serif" color="white">fratages ret til uddannelse</Heading>
 				</div>
 				<div class="xs:pt-6">
-					<a href="#section24"><Button variant="primary"size="large">Støt nu</Button></a>
+					<a aria-label="støtknap2" href="#section24"><Button variant="primary"size="large">Støt nu</Button></a>
 				</div>
 			</div>
 			<div class="absolute bottom-10 z-20 w-full flex justify-center fadeUp">
 	
-<a id="dyknedlink" href="#section1" class="animate-bounce hover:animate-none justify-center flex flex-col items-center gap-4">
+<a aria-label="dyknedlink" href="#section1" class="animate-bounce hover:animate-none justify-center flex flex-col items-center gap-4">
 	<Text teksttype="konsultativ" font="sans" color="white"> Dyk ned i Minas historie </Text>
-	<button id="dyknedknap"
+	<button aria-label="dyknedknap"
 class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-6 tracking-wider shadow-xl"
 >
 
@@ -127,7 +127,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 
 	<!-- PLAY/PAUSE KNAP HEADER -->
 	<div class="fixed top-4 xs:right-20 md:right-4 z-50 overflow-hidden">
-		<button id="playpauseknap"
+		<button aria-label="playpauseknap"
 			@click="playPause()"
 			class="p-3 rounded-full shadow-md bg-[#8988885c] backdrop-blur-md border border-white hover:bg-black/40 transition"
 		>
@@ -180,8 +180,8 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
                     </Text>
                 </div>
 
-                <a id="playpauselink2" href="#section2">
-                    <button id="playpauseknap2"
+                <a aria-label="playpauselink2" href="#section2">
+                    <button aria-label="playpauseknap2"
                         @click="playPause()"
                         class="cursor cursor-(--handcursor) rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-5 tracking-wider shadow-xl animate-bounce hover:animate-none"
                     >
@@ -225,7 +225,7 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 					<div class="pb-3">
 					<Text teksttype="konsultativ" font="sans" color="white"> Scroll videre </Text>
 				</div>
-					<button id="scrollzoomknap"
+					<button aria-label="scrollzoomknap"
 			 class="cursor-pointer xs:p-4 md:p-6 tracking-wider"
 				>
 				
@@ -549,11 +549,11 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 					<hr class="my-8">
 					<Heading htmlheading="h1" size="large" font="serif" color="white">Hvordan gik det sådan til i Afghanistan?</Heading>
 				
-				<a id="tilbagetilherolink" href="#hero-section" class="justify-center xs:hidden md:block flex flex-col bottom-10 pt-30 items-center gap-4 transition delay-150 duration-200 ease-in-out hover:-translate-y-2 ">
+				<a aria-label="tilbagetilherolink" href="#hero-section" class="justify-center xs:hidden md:block flex flex-col bottom-10 pt-30 items-center gap-4 transition delay-150 duration-200 ease-in-out hover:-translate-y-2 ">
 					<div class="pb-3">
 					<Text teksttype="konsultativ" font="sans" color="white"> Scroll tilbage </Text>
 				</div>
-					<button id="scrolltopknap1"
+					<button aria-label="scrolltopknap1"
 				class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-4 tracking-wider shadow-xl"
 				>
 				
@@ -863,11 +863,11 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				<hr class="my-8">
 				<Heading htmlheading="h1" size="large" font="serif" color="white">Sammen kan vi ændre på afghanske pigers skæbne</Heading>
 
-				<a id="linktilbagetilhero2" href="#hero-section" class="justify-center xs:hidden md:block flex flex-col bottom-10 pt-30 items-center gap-4 transition delay-150 duration-200 ease-in-out hover:-translate-y-2 ">
+				<a aria-label="linktilbagetilhero2" href="#hero-section" class="justify-center xs:hidden md:block flex flex-col bottom-10 pt-30 items-center gap-4 transition delay-150 duration-200 ease-in-out hover:-translate-y-2 ">
 					<div class="pb-3">
 					<Text teksttype="konsultativ" font="sans" color="white"> Scroll tilbage </Text>
 				</div>
-					<button id="scrolltopknap2"
+					<button aria-label="scrolltopknap2"
 				class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-4 tracking-wider shadow-xl"
 				>
 				
@@ -1134,11 +1134,11 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 				<hr class="my-8">
 				<Heading htmlheading="h1" size="large" font="serif" color="white">Vil du være med til at gøre en forskel?</Heading>
 
-				<a id="tilbagetilherolink2" href="#hero-section" class="justify-center xs:hidden md:block flex flex-col bottom-10 pt-30 items-center gap-4 transition delay-150 duration-200 ease-in-out hover:-translate-y-2 ">
+				<a aria-label="tilbagetilherolink2" href="#hero-section" class="justify-center xs:hidden md:block flex flex-col bottom-10 pt-30 items-center gap-4 transition delay-150 duration-200 ease-in-out hover:-translate-y-2 ">
 					<div class="pb-3">
 					<Text teksttype="konsultativ" font="sans" color="white"> Scroll tilbage </Text>
 				</div>
-					<button id="scrolltopknap3"
+					<button aria-label="scrolltopknap3"
 				class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c] backdrop-blur-[6px] xs:p-4 md:p-4 tracking-wider shadow-xl"
 				>
 				
