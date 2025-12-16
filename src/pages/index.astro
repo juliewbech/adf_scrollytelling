@@ -131,31 +131,44 @@ class="cursor-pointer rounded-full border-[1px] border-[#ffffffaa] bg-[#8988885c
 			@click="playPause()"
 			class="p-3 rounded-full shadow-md bg-[#8988885c] backdrop-blur-md border border-white hover:bg-black/40 transition"
 		>
-	
 			<!-- PLAY ikon -->
 			<svg x-show="!playing"
-				class="w-7 h-7"
-				stroke="white"
-				stroke-width="1"
-				viewBox="0 0 24 24"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<polygon points="6,4 20,12 6,20"/>
-			</svg>
+	class="w-7 h-7"
+	stroke="white"
+	stroke-width="1"
+	viewBox="0 0 24 24"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<!-- Højtaler -->
+	<polygon points="4,9 8,9 13,5 13,19 8,15 4,15"/>
+
+	<!-- Lyd-bølger -->
+	<path d="M16 9C17.5 10.5 17.5 13.5 16 15"/>
+	<path d="M18.5 7C21 9.5 21 14.5 18.5 17"/>
+</svg>
+
 	
 			<!-- PAUSE ikon -->
 			<svg x-show="playing"
-				class="w-7 h-7"
-				stroke="white"
-				stroke-width="1"
-				viewBox="0 0 24 24"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<rect x="6" y="4" width="4" height="16"/>
-				<rect x="14" y="4" width="4" height="16"/>
-			</svg>
+			class="w-7 h-7"
+			stroke="white"
+			stroke-width="1"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<!-- Højtaler -->
+			<polygon points="4,9 8,9 13,5 13,19 8,15 4,15"/>
+		
+			<!-- Kryds placeret hvor lyd-bølgerne er -->
+			<line x1="16" y1="9.5" x2="22.5" y2="16"/>
+			<line x1="22.5" y1="9.5" x2="16" y2="16"/>
+		</svg>
+		
+		
 	
 		</button>
 	</div>
