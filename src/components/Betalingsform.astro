@@ -22,13 +22,13 @@ import Heading from "../components/Heading.astro";
     </div>
 
       <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 justify-items-center">
-        <button onclick="selectAmount(50)" class="bg-white text-primary-500 p-6 rounded-2xl font-header text-2xl cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary-400 hover:text-white focus:bg-primary-600 focus:text-white">50 kr.</button>
-        <button onclick="selectAmount(100)" class="bg-white text-primary-500 p-6 rounded-2xl font-header text-2xl cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary-400 hover:text-white focus:bg-primary-600 focus:text-white">100 kr.</button>
+        <button onclick="selectAmount(50)" class="bg-white text-primary-500 p-6 rounded-2xl font-header text-2xl cursor-pointer transform transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary-400 hover:text-white focus:bg-primary-600 focus:text-white active:bg-primary-400 active:text-white active:-translate-y-1">50 kr.</button>
+        <button onclick="selectAmount(100)" class="bg-white text-primary-500 p-6 rounded-2xl font-header text-2xl cursor-pointer transform transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary-400 hover:text-white focus:bg-primary-600 focus:text-white active:bg-primary-400 active:text-white active:-translate-y-1">100 kr.</button>
       </section>
 
       <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 justify-items-center">
-        <button onclick="selectAmount(50)" class="bg-white text-primary-500 p-6 rounded-2xl font-header text-2xl cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary-400 hover:text-white focus:bg-primary-600 focus:text-white">250 kr.</button>
-        <button onclick="selectAmount(100)" class="bg-white text-primary-500 p-6 rounded-2xl font-header text-2xl cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary-400 hover:text-white focus:bg-primary-600 focus:text-white">400 kr.</button>
+        <button onclick="selectAmount(50)" class="bg-white text-primary-500 p-6 rounded-2xl font-header text-2xl cursor-pointer transform transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary-400 hover:text-white focus:bg-primary-600 focus:text-white active:bg-primary-400 active:text-white active:-translate-y-1">250 kr.</button>
+        <button onclick="selectAmount(100)" class="bg-white text-primary-500 p-6 rounded-2xl font-header text-2xl cursor-pointer transform transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary-400 hover:text-white focus:bg-primary-600 focus:text-white active:bg-primary-400 active:text-white active:-translate-y-1">400 kr.</button>
       </section>
 
       <div class="pt-4 w-full sm:w-72">
@@ -466,5 +466,14 @@ input:focus{
     document.getElementById('step4').style.display = 'none';
     document.getElementById('step3').style.display = 'flex';
   }
+
+  function selectAmount(amount) {
+  document.querySelectorAll('button').forEach(btn =>
+    btn.classList.remove('bg-primary-600', 'text-white')
+  )
+
+  event.currentTarget.classList.add('bg-primary-600', 'text-white')
+}
+
   </script>
   
